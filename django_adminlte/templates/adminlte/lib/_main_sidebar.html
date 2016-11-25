@@ -1,0 +1,49 @@
+{% load adminlte_helpers %}
+<!-- Left side column. contains the sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="{% avatar_url size=90 %}" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>{{ current_user.nickname }}</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        {% block nav_links_ul %}
+        <ul class="sidebar-menu">
+            {% block nav_links_outer %}
+            <li class="header">{% block nav_heading %}MAIN NAVIGATION{% endblock %}</li>
+
+            {% block nav_links %}
+            {% for menu in ROOT_MENU.menus %}
+                <li class="{% if menu == ROOT_MENU.current_menu or menu == ROOT_MENU.parent_menu %}
+                    active{% else %}treeview{% endif %}">
+
+                    <a href="{% if menu.sub_menus %}#{% elif menu.view_name %}{% url menu.view_name %}{% endif %}">
+                        <i class="fa {{ menu.icon_classes }}"></i> <span>{{ menu.name }}</span>
+                    </a>
+                    {% if menu.sub_menus %}
+                        <ul class="treeview-menu">
+                            {% for sub_menu in menu.sub_menus %}
+                                <li class="{% if sub_menu == ROOT_MENU.current_menu %}active{% endif %}">
+                                    <a href="{% if sub_menu.view_name %}{% url sub_menu.view_name %}{% endif %}">
+                                        <i class="fa {{ sub_menu.icon_classes }}"></i> {{ sub_menu.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            {% endblock nav_links %}
+            {% endblock nav_links_outer %}
+        </ul>
+        {% endblock nav_links_ul %}
+    </section>
+    <!-- /.sidebar -->
+</aside>

@@ -1,0 +1,27 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        {{ ROOT_MENU.current_menu.name }}
+        {% if ROOT_MENU.current_menu.description %}
+            <small>{{ ROOT_MENU.current_menu.description }}</small>
+        {% endif %}
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="{% if ROOT_MENU.index_menu.view_name %}{% url ROOT_MENU.index_menu.view_name %}{% endif %}">
+            <i class="fa fa-dashboard"></i> {{ ROOT_MENU.index_menu.name }}</a>
+        </li>
+        {% if ROOT_MENU.current_menu == ROOT_MENU.index_menu %}
+        {% elif ROOT_MENU.parent_menu %}
+            {% if ROOT_MENU.parent_menu.view_name %}
+                <li><a href="{% if ROOT_MENU.parent_menu.view_name %}{% url ROOT_MENU.parent_menu.view_name %}{% endif %}">
+                    {{ ROOT_MENU.parent_menu.name }}</a>
+                </li>
+            {% else %}
+                <li class="active">{{ ROOT_MENU.parent_menu.name }}</li>
+            {% endif %}
+            <li class="active">{{ ROOT_MENU.current_menu.name }}</li>
+        {% else %}
+            <li class="active">{{ ROOT_MENU.current_menu.name }}</li>
+        {% endif %}
+    </ol>
+</section>

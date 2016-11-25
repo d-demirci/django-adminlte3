@@ -1,0 +1,6 @@
+{% extends 'adminlte/lib/_main_sidebar.html' %}
+{% load admin_menu %}
+
+{% block nav_links %}
+    {% autoescape off %}{% menu %}{% endautoescape %}
+{% endblock nav_links %}

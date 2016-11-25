@@ -34,10 +34,10 @@ Credits
 -------
 
 * dnaextrim for [django_adminlte_x]
-* ricrdo for [django-adminlte]
+* beastbikes for [django-adminlte]
 
 django-adminlte2 is packaged using [seed].
 
   [seed]: https://github.com/adamcharnock/seed/
   [django_adminlte_x]: https://github.com/dnaextrim/django_adminlte_x
-  [django-adminlte]: https://github.com/ricrdo/django-adminlte
+  [django-adminlte]: https://github.com/beastbikes/django-adminlte/
