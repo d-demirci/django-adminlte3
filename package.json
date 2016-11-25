@@ -1,0 +1,12 @@
+{
+  "name": "habari",
+  "version": "1.0.0",
+  "description": "FuturePump Habari",
+  "dependencies": {
+    "admin-lte": "^2.3.6",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "icheck": "^1.0.2",
+    "jquery": "^2.2.4"
+  }
+}
