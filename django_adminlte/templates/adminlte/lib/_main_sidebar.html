@@ -20,26 +20,26 @@
             <li class="header">{% block nav_heading %}MAIN NAVIGATION{% endblock %}</li>
 
             {% block nav_links %}
-            {% for menu in ROOT_MENU.menus %}
-                <li class="{% if menu == ROOT_MENU.current_menu or menu == ROOT_MENU.parent_menu %}
-                    active{% else %}treeview{% endif %}">
-
-                    <a href="{% if menu.sub_menus %}#{% elif menu.view_name %}{% url menu.view_name %}{% endif %}">
-                        <i class="fa {{ menu.icon_classes }}"></i> <span>{{ menu.name }}</span>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Example link</span>
                     </a>
-                    {% if menu.sub_menus %}
-                        <ul class="treeview-menu">
-                            {% for sub_menu in menu.sub_menus %}
-                                <li class="{% if sub_menu == ROOT_MENU.current_menu %}active{% endif %}">
-                                    <a href="{% if sub_menu.view_name %}{% url sub_menu.view_name %}{% endif %}">
-                                        <i class="fa {{ sub_menu.icon_classes }}"></i> {{ sub_menu.name }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
                 </li>
-            {% endfor %}
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-group"></i> <span>Sub menu</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i> Another link
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             {% endblock nav_links %}
             {% endblock nav_links_outer %}
         </ul>
