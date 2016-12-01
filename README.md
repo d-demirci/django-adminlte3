@@ -24,7 +24,8 @@ Add to installed apps:
 Usage
 -----
 
-General purpose templates & tags coming soon
+The [base template] is designed to be highly customisable. Template blocks are provided to
+allow you to hook in customisations as you wish
 
 ### Admin Theme Usage
 

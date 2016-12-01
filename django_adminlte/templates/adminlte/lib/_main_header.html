@@ -1,4 +1,4 @@
-{% load adminlte_helpers %}
+{% load adminlte_helpers i18n %}
 <header class="main-header">
     <!-- Logo -->
     {% block logo %}
@@ -23,29 +23,41 @@
 
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+                {% block header_dropdowns %}
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="{% avatar_url size=50 %}" class="user-image" alt="User Image">
-                        <span class="hidden-xs">{{ current_user.nickname }}</span>
+                        <span class="hidden-xs">{% firstof request.user.get_short_name request.user.get_username %}</span>
                     </a>
                     <ul class="dropdown-menu">
+                        {% block user_header %}
                         <!-- User image -->
                         <li class="user-header">
                             <img src="{% avatar_url size=180 %}" class="img-circle" alt="User Image">
 
                             <p>
-                                {{ current_user.nickname }}
-                                <small>{{ current_user.date_joined }}</small>
+                                {% firstof request.user.get_short_name request.user.get_username %}
+                                <small>Member since {{ request.user.date_joined }}</small>
                             </p>
                         </li>
+                        {% endblock %}
+
                         <!-- Menu Footer-->
+                        {% block menu_footer %}
                         <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="{% block change_password_url %}{% url 'admin:password_change' %}{% endblock %}"
+                                   class="btn btn-default btn-flat">{% trans 'Change password' %}</a>
+                            </div>
                             <div class="pull-right">
                                 <a href="{% block logout_url %}{% logout_url %}{% endblock %}" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
+                        {% endblock %}
+
                     </ul>
                 </li>
+                {% endblock header_dropdowns %}
             </ul>
         </div>
     </nav>
