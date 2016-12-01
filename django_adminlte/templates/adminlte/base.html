@@ -2,7 +2,7 @@
 <html>
 <head>
     {% block title_outer %}
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block title %}{{ site.name }}{% endblock %}</title>
     {% endblock %}
 
     {% block meta %}
@@ -13,7 +13,6 @@
 
     {% block stylesheets %}
         {% include 'adminlte/lib/_styles.html' %}
-        {% block extrastyle %}{% endblock %}
     {% endblock %}
 
     {% block extra_head %}{% endblock %}
@@ -33,7 +32,17 @@
     {% block content_wrapper %}
     <div class="content-wrapper">
         {% block content_header %}
-            {% include 'adminlte/lib/_content_header.html' %}
+            <section class="content-header">
+                <h1>
+                    {% block page_name %}{% endblock %}
+                    {% block no_description %}
+                    <small>{% block page_description %}{% endblock %}</small>
+                    {% endblock %}
+                </h1>
+                {% block breadcrumbs %}
+                    {# Breadcrumb implementation left to developers #}
+                {% endblock %}
+            </section>
         {% endblock %}
 
         {% block content_outer %}
