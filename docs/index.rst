@@ -9,14 +9,22 @@ Django AdminLTE2
 Django AdminLTE2 provides extensible templates for making use of the general purpose
 AdminLTE2_ theme.
 
-
-Contents:
+Contents
+--------
 
 .. toctree::
     :maxdepth: 2
 
     quickstart
     templates_and_blocks
+
+Credits
+-------
+
+This project a based heavily on work by the following:
+
+ * *dnaextrim* for `django_adminlte_x`_
+ * *beastbikes* for `django-adminlte`_
 
 
 Indices and tables
@@ -28,3 +36,5 @@ Indices and tables
 
 
 .. _AdminLTE2: https://almsaeedstudio.com/
+.. _django_adminlte_x: https://github.com/dnaextrim/django_adminlte_x
+.. _django-adminlte: https://github.com/beastbikes/django-adminlte
