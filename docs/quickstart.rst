@@ -82,6 +82,3 @@ In **your own app** create the template ``adminlte/lib/_main_sidebar.html``:
     {% endblock nav_links %}
 
 You should now find the navigation has updated.
-
-NOTE: This is going to override the admin navigation. How do we prevent this? Override the includes in the
-the base admin template (in ``django_adminlte_theme``)?
