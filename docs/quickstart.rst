@@ -44,7 +44,7 @@ for you to extend.
 
     {% block title %}My App{% endblock %}
     {% block content %}
-        Welcome to my app!
+        Just some example content
     {% endblock %}
 
 Take a look at the base template to see the available blocks.

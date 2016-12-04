@@ -1,4 +1,6 @@
 {% load static %}
+
+{% block styles %}
 <link rel="stylesheet" type="text/css"
       href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}"/>
 <link rel="stylesheet" type="text/css" href="{% static "bootstrap/dist/css/bootstrap.min.css" %}">
@@ -9,3 +11,4 @@
 <link rel="stylesheet" type="text/css" href="{% static "admin-lte/dist/css/skins/_all-skins.min.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "icheck/skins/square/blue.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "conflicts/conflicts.css" %}">
+{% endblock %}

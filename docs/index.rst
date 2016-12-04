@@ -19,7 +19,6 @@ Contents:
     templates_and_blocks
 
 
-
 Indices and tables
 ==================
 

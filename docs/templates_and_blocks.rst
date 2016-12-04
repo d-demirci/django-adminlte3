@@ -111,7 +111,7 @@ Block reference
 
     Wrapper around all of the content area (including the content header, messages, and actual page content).
 
-    **You probably want to override the ``content`` block instead.** Default::
+    **You probably want to override the ``content`` block instead.**
 
 ``content_header``
 ''''''''''''''''''
@@ -214,8 +214,271 @@ Block reference
 
     Additional HTML to be placed before the ``</body>`` tag. Empty by default.
 
+``body``
+''''''''
+
+    Wraps the entire contents of the body tag, excluding the ``javascript`` and ``extra_foot`` blocks.
+    Define if you wish to replace the entire body of the page
 
 
+adminlte/login.html
+~~~~~~~~~~~~~~~~~~~
+
+Base template for a login interface. This excludes the navigational elements which are usually
+present. Example::
+
+        {% extends "adminlte/login.html" %}
+
+        {% block form %}
+            <form method="post">
+                {% csrf_token %}
+                {{ form  }}
+            </form>
+        {% endblock %}
+
+Block reference
+"""""""""""""""
+
+The login form defines some blocks in addition to those available on `adminlte/base.html`_.
+
+``logo``
+''''''''
+
+    Wraps the logo section of the login page. Default::
+
+        {% block logo %}
+        <div class="login-logo">
+            <a href="{% block logo_href %}/{% endblock %}">{% block logo_text %}<b>Admin</b>LTE{% endblock %}</a>
+        </div>
+        {% endblock %}
+
+``logo_text``
+'''''''''''''
+
+    The name of the site as shown above the login form. Default::
+
+        {% block logo_text %}<b>Admin</b>LTE{% endblock %}
+
+``logo_href``
+'''''''''''''
+
+    URL the logo should link to. Default: ``/``
+
+
+``login_form``
+''''''''''''''
+
+    The form to be displayed. Defaults to a static HTML form.
+
+
+Include templates
+-----------------
+
+Much of the HTML rendering is done in included template files. These files
+reside in ``adminlte/lib/``.
+
+The easiest way to do this is to create a file of the same path and name in your
+app's templates folder. This new template can then extend the original template and
+tweak blocks as necessary (or, if you wish, forgo the extending the reimplement the entire
+template).
+
+Here is an example of the overriding and extension. We will be overriding the
+sidebar template (``adminlte/lib/_main_sidebar.html``), so we'll create
+a template called ``my_app_name/templates/adminlte/lib/_main_sidebar.html``::
+
+    {% extends 'adminlte/lib/_main_sidebar.html' %}
+
+    {% block nav_links %}
+        <li>
+            <a href="/some/url">
+                <i class="fa fa-dashboard"></i> <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="/some/url">
+                <i class="fa fa-user"></i> <span>Users</span>
+            </a>
+        </li>
+    {% endblock nav_links %}
+
+adminlte/lib/_main_sidebar.html
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Renders the sidebar navigation. You'll likely need to implement this template
+at a minimum.
+
+Block Reference
+"""""""""""""""
+
+``user_panel``
+''''''''''''''
+
+    Wraps the user details panel
+
+``nav_links``
+'''''''''''''
+
+    Renders the ``<li>`` elements for the navigation. See above for an example.
+
+``nav_links_ul``
+''''''''''''''''
+
+    Wrapper around the entire ``<ul>`` element containing the navigation.
+
+    You probably want to use `nav_links`_.
+
+``nav_links_outer``
+'''''''''''''''''''
+
+    Wrapper within the ``<ul>`` element around all ``<li>`` elements.
+
+    You probably want to use `nav_links`_.
+
+adminlte/lib/_main_header.html
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Renders the header. Contains the site name and details regarding the currently logged in user.
+
+Block Reference
+"""""""""""""""
+
+``logo``
+''''''''
+
+    Wraps the logo HTML. Default::
+
+        {% block logo %}
+        <a href="{% block logo_href %}/{% endblock %}" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>On</b>ly</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Only</b>Admin</span>
+        </a>
+        {% endblock %}
+
+``logo_href``
+'''''''''''''
+
+    URL the logo should link to. Default: ``/``
+
+``logo_text``
+'''''''''''''
+
+    The name of the site as shown in the header. Default::
+
+        {% block logo_text %}<b>Admin</b>LTE{% endblock %}
+
+``logo_text_small``
+'''''''''''''''''''
+
+    The logo name of the site as show in the header (used on narrow/mobile screens). Default::
+
+        {% block logo_text_small %}<b>A</b>LTE{% endblock %}
+
+``nav_bar``
+'''''''''''
+
+    The entirety of the header navigation
+
+``header_dropdowns``
+''''''''''''''''''''
+
+    The dropdown menus in the header.
+
+``user_header``
+'''''''''''''''
+
+    The contents of the user dropdown in the header. Default::
+
+        {% block user_header %}
+        <li class="user-header">
+            <img src="{% avatar_url size=180 %}" class="img-circle" alt="User Image">
+            <p>
+                {% firstof request.user.get_short_name request.user.get_username %}
+                <small>Member since {{ request.user.date_joined }}</small>
+            </p>
+        </li>
+        {% endblock %}
+
+``menu_footer``
+'''''''''''''''
+
+    The footer of the user dropdown. Normally used for actions such as 'Change password'
+    and 'logout'. Default::
+
+        {% block menu_footer %}
+        <li class="user-footer">
+            <div class="pull-left">
+                <a href="{% block change_password_url %}{% url 'admin:password_change' %}{% endblock %}"
+                   class="btn btn-default btn-flat">{% trans 'Change password' %}</a>
+            </div>
+            <div class="pull-right">
+                <a href="{% block logout_url %}{% logout_url %}{% endblock %}" class="btn btn-default btn-flat">Sign out</a>
+            </div>
+        </li>
+        {% endblock %}
+
+``change_password_url``
+'''''''''''''''''''''''
+
+    The URL to the change password interface (defaults to Django admin's change password page)
+
+``logout_url``
+''''''''''''''
+
+    The URL used for logging out the current user. Defaults to the value given in the ``LOGOUT_URL``
+    setting, or ``/logout`` if not set.
+
+
+adminlte/lib/_main_footer.html
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Renders the footer containing (by default) a legal notice and software version.
+
+Default footer content::
+
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            {% block footer_right %}
+                <b>Version</b> {% block version %}0.1{% endblock %}
+            {% endblock %}
+        </div>
+
+        {% block footer_left %}
+        {% block legal %}
+        <strong>Copyright &copy; {% now "Y" %}{% if not site %}.{% endif %}
+            {% if site %}
+                <a href="http://{{ site.domain }}">{{ site.name }}</a>
+            {% endif %}
+        </strong> All rights
+        reserved.
+        {% endblock %}
+        {% endblock %}
+    </footer>
+
+Block Reference
+"""""""""""""""
+
+``footer_right``
+''''''''''''''''
+
+    Content to be displayed on the right of the footer. See above for default.
+
+``version``
+'''''''''''
+
+    The current version of the software. Shown in ``footer_right`` by default.
+
+``footer_left``
+'''''''''''''''
+
+    The left hand content of the footer. Contains only ``legal`` by default.
+
+``legal``
+'''''''''
+
+    Legal notice. Will include a copyright notice referencing the current date and
+    site name (if present).
 
 
 
