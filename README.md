@@ -31,6 +31,11 @@ allow you to hook in customisations as you wish
 
 Install as per the above installation instructions. The django admin UI should then change as expected.
 
+Documentation
+-------------
+
+Can be found at: http://django-adminlte2.readthedocs.io
+
 Credits
 -------
 
