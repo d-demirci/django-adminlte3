@@ -49,3 +49,5 @@ coverage.xml
 
 /node_modules
 /.static
+/build
+/dist
