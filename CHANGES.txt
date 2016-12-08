@@ -4,6 +4,13 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.1.1, Thu 08 Dec 2016
+===============================
+
+0fa4282da9	Ignore build & dist dirs (Adam Charnock)
+8e2d08a9a9	Adding extrastyle block for admin template (fixes admin styling issues) (Adam Charnock)
+
+
 Version 0.1.0 (first version), Wed 07 Dec 2016
 ===============================================
 
