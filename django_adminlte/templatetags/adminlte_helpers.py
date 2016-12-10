@@ -15,7 +15,7 @@ def logout_url():
 def avatar_url(context, size=None):
     # TODO: Make behaviour configurable
     user = context['request'].user
-    return 'https://www.gravatar.com/avatar/{hash}?s={size}'.format(
+    return 'https://www.gravatar.com/avatar/{hash}?s={size}&d=mm'.format(
         hash=md5(user.email.encode('utf-8')).hexdigest() if user.is_authenticated() else '',
         size=size or '',
     )
