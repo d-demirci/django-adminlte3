@@ -10,16 +10,27 @@ Add the apps to ``INSTALLED_APPS``:
 .. code:: python
 
     INSTALLED_APPS = [
+        # Any apps which will override adminlte's templates (i.e. your apps)
+        ...
+
         # The general purpose templates
         'django_adminlte',
 
-        # Optional: Skin for the admin interface.
-        # Note: Must appear before 'django.contrib.admin'
+        # Optional: Skin for the admin interface
         'django_adminlte_theme',
 
+        # Any apps which need to have their templates overridden by adminlte
         'django.contrib.admin',
-        # everything else
+        ...
     ]
+
+.. important::
+
+    Take note of the ordering of ``INSTALLED_APPS``. If find templates are not
+    being found & used as expected it is probably due to a problem here.
+
+    Django looks for a template in the order in which apps are listed in
+    ``INSTALLED_APPS``, hence the ordering above.
 
 If you only wish to skin the admin interface, you can stop here. Your admin
 interface should now be displaying with the AdminLTE theme.
