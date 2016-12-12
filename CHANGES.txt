@@ -4,6 +4,13 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.1.2, Mon 12 Dec 2016
+===============================
+
+551a9a26bd	Make UI more sane for anonymous users (Adam Charnock)
+adea060400	Update the installation docs (Adam Charnock)
+
+
 Version 0.1.1, Thu 08 Dec 2016
 ===============================
 

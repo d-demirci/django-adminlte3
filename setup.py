@@ -17,5 +17,6 @@ setup(
     # Any requirements here, e.g. "Django >= 1.1.1"
     install_requires=[
         'django',
+        'django-adminlte2'
     ],
 )
