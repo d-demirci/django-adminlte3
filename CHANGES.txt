@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.1.3, Mon 12 Dec 2016
+===============================
+
+31894b50e9	Removing errant requirements in setup.py (Adam Charnock)
+
+
 Version 0.1.2, Mon 12 Dec 2016
 ===============================
 
