@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.1.4, Mon 12 Dec 2016
+===============================
+
+6a65af5069	Adding manifest (Adam Charnock)
+
+
 Version 0.1.3, Mon 12 Dec 2016
 ===============================
 
