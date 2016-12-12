@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.1.5, Mon 12 Dec 2016
+===============================
+
+8c20bccec5	Work on packaging of static files (Adam Charnock)
+
+
 Version 0.1.4, Mon 12 Dec 2016
 ===============================
 
