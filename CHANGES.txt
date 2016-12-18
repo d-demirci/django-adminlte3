@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.1.6, Sun 18 Dec 2016
+===============================
+
+dfeea5a35e	Adding missing __init__.py file (Adam Charnock)
+
+
 Version 0.1.5, Mon 12 Dec 2016
 ===============================
 
