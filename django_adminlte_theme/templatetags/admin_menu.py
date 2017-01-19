@@ -1,4 +1,11 @@
+# -*- coding: utf-8 -*-
+# @Author: Phu Hoang
+# @Date:   2017-01-19 17:20:24
+# @Last Modified by:   Phu Hoang
+# @Last Modified time: 2017-01-19 18:57:18
+
 from django import template
+
 import re
 
 from django.urls import reverse
@@ -51,13 +58,17 @@ class _Menu:
 
     def render(self, context, menus=None):
         menus = {} if menus is None else menus
+        request = context['request']
+
         r = ''
 
         if len(menus) <= 0:
             # sorted(self.parents)
             menus = self.parents
-
-            r = '<li><a href="' + reverse('admin:index') + '"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>'
+            if(request.path == reverse('admin:index')):
+                r = '<li class="active"><a href="' + reverse('admin:index') + '"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>'
+            else:
+                r = '<li><a href="' + reverse('admin:index') + '"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>'
 
         for group in menus:
             key = [key for key in group][0]
@@ -78,13 +89,17 @@ class _Menu:
                 r += '</ul></li>\n'
 
             else:
-                r += '<li><a href="%s">%s <span>%s</span></a></li>\n' % (
-                    group[key]['link'], icon, group[key]['label'])
+                if(request.path == reverse('admin:index')):
+                    r += '<li><a href="%s">%s <span>%s</span></a></li>\n' % (
+                        group[key]['link'], icon, group[key]['label'])
+                else:
+                    r += '<li><a href="%s">%s <span>%s</span></a></li>\n' % (
+                        group[key]['link'], icon, group[key]['label'])
 
         return r
 
     def admin_apps(self, context, r):
-
+        request = context['request']
         for app in context['available_apps']:
             r += '<li class="treeview"><a href="#"><i class="fa fa-circle"></i> <span>%s</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a><ul class="treeview-menu">\n' % (
                 app['name'])
@@ -109,8 +124,10 @@ class _Menu:
                             icon = self.models_icon[model['object_name'].title()]
                         else:
                             icon = '<i class="%s"></i>' % (self.models_icon[model['object_name'].title()])
-
-                r += '<li><a href="%s">%s %s</a></li>' % (url, icon, model['name'])
+                if(request.path == url):
+                    r += '<li class="active"><a href="%s">%s %s</a></li>' % (url, icon, model['name'])
+                else:
+                    r += '<li><a href="%s">%s %s</a></li>' % (url, icon, model['name'])
 
             r += '</ul></li>\n'
 

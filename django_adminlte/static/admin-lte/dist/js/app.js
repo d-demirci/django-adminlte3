@@ -388,6 +388,9 @@ function _init() {
   $.AdminLTE.tree = function (menu) {
     var _this = this;
     var animationSpeed = $.AdminLTE.options.animationSpeed;
+    $(menu + ' .treeview-menu li.active').each(function(){
+      $(this).parent('.treeview-menu').parent('.treeview').addClass('active');
+    });
     $(document).off('click', menu + ' li a')
       .on('click', menu + ' li a', function (e) {
         //Get the clicked link and the next element
