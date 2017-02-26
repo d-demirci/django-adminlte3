@@ -9,6 +9,8 @@
               href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}"/>
     {% endif %}
 
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}"/>
+
     {% block extrastyle %}{% endblock %}
     {% block extrahead %}{% endblock %}
     {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
