@@ -1,0 +1,20 @@
+{% load humanize %}
+<div class="info-box bg-{{ color }}">
+    {% if not hide_icon %}
+        <span class="info-box-icon"><i class="fa fa-{{ icon }}"></i></span>
+    {% endif %}
+    <div class="info-box-content">
+        <span class="info-box-text">{{ header }}</span>
+        <span class="info-box-number">{{ number }} {{ unit }}</span>
+        {% if percent %}
+            <div class="progress">
+                <div class="progress-bar" style="width: {{ percent }}%"></div>
+            </div>
+            {% if how_long %}
+                <span class="progress-description">
+                    {{ percent }}% Increase in {{ how_long }}
+                </span>
+            {% endif %}
+        {% endif %}
+    </div><!-- /.info-box-content -->
+</div><!-- /.info-box -->
