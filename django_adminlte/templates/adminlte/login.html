@@ -1,4 +1,5 @@
 {% extends "adminlte/base.html" %}
+{% load i18n static %}
 
 {% block body_class %}login-page{% endblock %}
 
@@ -12,8 +13,26 @@
         {% endblock %}
         <!-- /.login-logo -->
         <div class="login-box-body">
+            {% block login_errors %}
+                {% if form.errors and not form.non_field_errors %}
+                    <p class="alert alert-danger">
+                        {% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}
+                            {% trans "Please correct the errors below." %}{% endif %}
+                    </p>
+                {% endif %}
+
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <p class="alert alert-danger">
+                            {{ error }}
+                        </p>
+                    {% endfor %}
+                {% endif %}
+            {% endblock login_errors %}
+
             {% block login_form %}
-                <form action="" method="post">{% csrf_token %}
+                <form action="" method="post">
+                    {% csrf_token %}
                     {% if message %}
                         <p class="login-box-msg" style="color: red;">{{ message }}</p>
                     {% endif %}
