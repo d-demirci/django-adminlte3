@@ -21,6 +21,9 @@
             <span class="icon-bar"></span>
         </a>
 
+        {% block nav_bar_center %}{% endblock %}
+
+        {% block nav_custom_menu %}
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 {% block header_dropdowns %}
@@ -60,6 +63,7 @@
                 {% endblock header_dropdowns %}
             </ul>
         </div>
+        {% endblock nav_custom_menu %}
     </nav>
     {% endblock %}
 </header>
