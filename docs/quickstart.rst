@@ -26,7 +26,7 @@ Add the apps to ``INSTALLED_APPS``:
 
 .. important::
 
-    Take note of the ordering of ``INSTALLED_APPS``. If find templates are not
+    Take note of the ordering of ``INSTALLED_APPS``. If you find templates are not
     being found & used as expected it is probably due to a problem here.
 
     Django looks for a template in the order in which apps are listed in
