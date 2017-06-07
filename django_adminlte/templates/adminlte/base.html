@@ -35,6 +35,9 @@
                 <section class="content-header">
                     <h1>
                         {% block page_name %}{% endblock %}
+                        <div class="header-actions">
+                            {% block page_actions %}{% endblock %}
+                        </div>
                         {% block no_description %}
                         <small>{% block page_description %}{% endblock %}</small>
                         {% endblock %}
