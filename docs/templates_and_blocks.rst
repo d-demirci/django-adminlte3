@@ -152,6 +152,15 @@ Block reference
 
         {% block no_description %}{% endblock %}
 
+``page_actions``
+''''''''''''''''
+
+    Generally used to display actions/buttons relevant to the current page. For example::
+
+        {% block page_actions %}
+            <a href="{% url 'alerts:create' %}" class="btn btn-success btn-sm">Create new</a>
+        {% endblock %}
+
 ``breadcrumbs``
 '''''''''''''''
 
@@ -315,6 +324,11 @@ Block Reference
 
     Wraps the user details panel
 
+``form``
+''''''''
+
+    An empty tag where you may wish to include a form. The AdminLTE examples place a search box here.
+
 ``nav_links``
 '''''''''''''
 
@@ -379,6 +393,11 @@ Block Reference
 '''''''''''
 
     The entirety of the header navigation
+
+``nav_bar_center``
+''''''''''''''''''
+
+    An empty block in the center of the main nav bar.
 
 ``header_dropdowns``
 ''''''''''''''''''''
