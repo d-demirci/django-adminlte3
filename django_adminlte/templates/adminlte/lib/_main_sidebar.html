@@ -10,8 +10,7 @@
                 <img src="{% avatar_url size=90 %}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>{{ current_user.nickname }}</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <p>{% firstof request.user.get_full_name request.user.username %}</p>
             </div>
         </div>
         {% endblock %}
