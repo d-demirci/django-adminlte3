@@ -17,6 +17,7 @@ Contents
 
     quickstart
     templates_and_blocks
+    templates_tags
 
 Credits
 -------
