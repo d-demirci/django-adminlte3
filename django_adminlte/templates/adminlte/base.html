@@ -33,18 +33,20 @@
         <div class="content-wrapper">
             {% block content_header %}
                 <section class="content-header">
-                    <h1>
-                        {% block page_name %}{% endblock %}
-                        <div class="header-actions">
-                            {% block page_actions %}{% endblock %}
-                        </div>
-                        {% block no_description %}
-                        <small>{% block page_description %}{% endblock %}</small>
+                    {% block no_heading %}
+                        <h1>
+                            {% block page_name %}{% endblock %}
+                            <div class="header-actions">
+                                {% block page_actions %}{% endblock %}
+                            </div>
+                            {% block no_description %}
+                            <small>{% block page_description %}{% endblock %}</small>
+                            {% endblock %}
+                        </h1>
+                        {% block breadcrumbs %}
+                            {# Breadcrumb implementation left to developers #}
                         {% endblock %}
-                    </h1>
-                    {% block breadcrumbs %}
-                        {# Breadcrumb implementation left to developers #}
-                    {% endblock %}
+                    {% endblock no_heading %}
                 </section>
             {% endblock %}
 
