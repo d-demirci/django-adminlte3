@@ -4,6 +4,26 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.0, Tue 28 Nov 2017
+===============================
+
+c9f88d9044	Removing box around django messages (Adam Charnock)
+4ef0655ed1	Adding no_heading block (Adam Charnock)
+1fe9eb4663	Adding {% add_active %} template tag, plus template tag docs (Adam Charnock)
+425150f927	Correcting how user display name is determined. Removing meaningless online status. (Adam Charnock)
+1a9e7f3494	Fixing endblock position (Adam Charnock)
+fee5145db9	Documenting new blocks (Adam Charnock)
+f32bf0983e	Adding empty 'nav_bar_center' block, wrapping custom nav bar menu in 'nav_custom_menu' (Adam Charnock)
+72025213f6	Adding empty 'form' block to _main_sidebar.html (Adam Charnock)
+e9f961b263	Adding page_actions block to content header (Adam Charnock)
+b8280b03aa	Fixing docs typo (Adam Charnock)
+8622c42306	Fixed logout url on admin theme (mrodal@hacknoid.com)
+71f8067298	Adding info_box component (Adam Charnock)
+6e827e245d	Moving base css styles (Adam Charnock)
+9be9a09ca7	Login template now shows errors (Adam Charnock)
+34b687b1bc	Fix: current menu not expand, not active (Phu Hoang)
+
+
 Version 0.1.6, Sun 18 Dec 2016
 ===============================
 
