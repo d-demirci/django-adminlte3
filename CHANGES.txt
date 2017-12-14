@@ -4,6 +4,15 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.1, Thu 14 Dec 2017
+===============================
+
+aefc4b1c7c	Updating docs for new login_form_links block (Adam Charnock)
+a4afb97d2c	Correcting placeholder in login template (Email -> Username). Adding {% block login_form_links %} to login UI. (Adam Charnock)
+d31a174d89	Update LICENSE.txt (Adam Charnock)
+c14a82d4da	Adding user parameter to avatar_url() template tag (Adam Charnock)
+
+
 Version 0.2.0, Tue 28 Nov 2017
 ===============================
 
