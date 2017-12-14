@@ -279,6 +279,11 @@ The login form defines some blocks in addition to those available on `adminlte/b
 
     The form to be displayed. Defaults to a static HTML form.
 
+``login_form_links``
+''''''''''''''''''''
+
+    Show to the left of the login button. A useful place for a forgotten password link.
+
 
 Include templates
 -----------------
