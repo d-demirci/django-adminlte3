@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.2, Sun 17 Dec 2017
+===============================
+
+4d04d5403b	Fixing django 2.0 compatability (closes #11, #12, #13) (Adam Charnock)
+
+
 Version 0.2.1, Thu 14 Dec 2017
 ===============================
 
