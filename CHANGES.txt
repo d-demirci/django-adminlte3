@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.3, Tue 19 Dec 2017
+===============================
+
+b0695fd688	Solved Bool object isn't callable issue (basitsattar)
+
+
 Version 0.2.2, Sun 17 Dec 2017
 ===============================
 
