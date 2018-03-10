@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.3.0, Sat 10 Mar 2018
+===============================
+
+b566d7879b	jquery-ui.min.js made available locally (Guillermo Rodríguez)
+
+
 Version 0.2.3, Tue 19 Dec 2017
 ===============================
 
