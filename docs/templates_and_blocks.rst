@@ -99,7 +99,7 @@ Block reference
 
     Wrapper around the entirety of the sidebar. Default::
 
-        {% block nav_header %}
+        {% block nav_sidebar %}
             {% include 'adminlte/lib/_main_sidebar.html' %}
         {% endblock %}
 
