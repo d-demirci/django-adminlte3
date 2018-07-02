@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.4.1, Mon 02 Jul 2018
+===============================
+
+fe6a96071a	Slight improvement to add_active template tag not_when parameter (Adam Charnock)
+
+
 Version 0.4.0, Mon 02 Jul 2018
 ===============================
 
