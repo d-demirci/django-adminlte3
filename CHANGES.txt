@@ -4,6 +4,13 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.4.0, Mon 02 Jul 2018
+===============================
+
+92649eae85	Adding 'not_when' parameter to add_active template tag (Adam Charnock)
+5e297a7ffb	Fixed typo in template docs - nav_sidebar example (Artur)
+
+
 Version 0.3.0, Sat 10 Mar 2018
 ===============================
 
