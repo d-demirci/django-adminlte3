@@ -1,0 +1,63 @@
+{% load adminlte_helpers %}
+{%load static %}
+<!-- Left side column. contains the sidebar -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+     <!-- Brand Logo -->
+     <a href="/" class="brand-link">
+        <img src="{%static 'admin-lte/dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">AdminLTE 3</span>
+      </a>
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <div class="sidebar">
+        <!-- Sidebar user panel -->
+        {% block user_panel %}
+        <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{% avatar_url size=90 %}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">{% firstof request.user.get_full_name request.user.username %}</a>
+        </div>
+      </div>
+        {% endblock %}
+
+        {% block form %}{% endblock %}
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        {% block nav_links_ul %}
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            {% block nav_links_outer %}
+            <li class="nav-header">{% block nav_heading %}MAIN NAVIGATION{% endblock %}</li>
+
+            {% block nav_links %}
+                <li>
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <p>Example link</p>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-group"></i> <p>Sub menu</p>
+                        <p class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </p>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i> Another link
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            {% endblock nav_links %}
+            {% endblock nav_links_outer %}
+            </ul>
+            </nav>
+        {% endblock nav_links_ul %}
+    </div>
+    <!-- /.sidebar -->
+</aside>

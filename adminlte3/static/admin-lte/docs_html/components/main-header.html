@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Main Header Component | AdminLTE 3 Documentation</title>
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Main Header Component | AdminLTE v3 Documentaion</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Main Header Component" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AdminLTE v3 Documentaion" />
+<meta property="og:description" content="AdminLTE v3 Documentaion" />
+<meta property="og:site_name" content="AdminLTE v3 Documentaion" />
+<script type="application/ld+json">
+{"description":"AdminLTE v3 Documentaion","@type":"WebPage","url":"/components/main-header.html","headline":"Main Header Component","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/assets/css/docs.css">
+    <link rel="stylesheet" href="/assets/css/highlighter.css">
+    <link rel="stylesheet" href="/assets/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link bg-info rounded dropdown-toggle" href="#" id="navbarVersionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          v3.0
+        </a>
+        <div class="dropdown-menu py-0" aria-labelledby="navbarVersionDropdown">
+          <a class="dropdown-item bg-info disabled" href="#">v3.0</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://adminlte.io/docs/2.4/installation">v2.4</a>
+          <a class="dropdown-item" href="https://adminlte.io/themes/AdminLTE/documentation/index.html"><= v2.3</a>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li> -->
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <!-- <form class="form-check-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form> -->
+    </nav>
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="/index.html" class="brand-link logo-switch">
+      <img src="/assets/img/logo-xs.png" alt="AdminLTE Docs Logo Small" class="brand-image-xl logo-xs">
+      <img src="/assets/img/logo-xl.png" alt="AdminLTE Docs Logo Large" class="brand-image-xs logo-xl" style="left: 12px">
+    </a>
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/index.html" class="nav-link ">
+                <i class="nav-icon fas fa-microchip"></i>
+                <p>
+                  Installation
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/dependencies.html" class="nav-link ">
+                <i class="nav-icon fas fa-handshake"></i>
+                <p>
+                  Dependencies & Plugins
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/layout.html" class="nav-link ">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Layout
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item has-treeview menu-open">
+              
+
+              <a href="/components" class="nav-link active">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Components
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+              
+                <ul class="nav nav-treeview">
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/main-header.html" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Main Header</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/main-sidebar.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Main Sidebar</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/control-sidebar.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Control Sidebar</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/cards.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Card</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/boxes.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Small-/ Info-Box</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/direct-chat.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Direct Chat</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/timeline.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Timeline</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/ribbons.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Ribbons</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/miscellaneous.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Miscellaneous</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/plugins.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Plugins</p>
+                    </a>
+                  </li>
+                
+                </ul>
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item has-treeview ">
+              
+
+              <a href="/javascript" class="nav-link ">
+                <i class="nav-icon fas fa-code"></i>
+                <p>
+                  JavaScript
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+              
+                <ul class="nav nav-treeview">
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/layout.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Layout</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/push-menu.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Push Menu</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/treeview.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Treeview</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/card-widget.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Card Widget</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/card-refresh.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>CardRefresh</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/control-sidebar.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Control Sidebar</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/direct-chat.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Direct Chat</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/todo-list.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Todo List</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/toasts.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Toasts</p>
+                    </a>
+                  </li>
+                
+                </ul>
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/browser-support.html" class="nav-link ">
+                <i class="nav-icon fab fa-chrome"></i>
+                <p>
+                  Browser Support
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/upgrade-guide.html" class="nav-link ">
+                <i class="nav-icon fas fa-hand-point-up"></i>
+                <p>
+                  Upgrade Guide
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/implementations.html" class="nav-link ">
+                <i class="nav-icon fas fa-bookmark"></i>
+                <p>
+                  Implementations
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/faq.html" class="nav-link ">
+                <i class="nav-icon fas fa-question-circle"></i>
+                <p>
+                  FAQ
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/license.html" class="nav-link ">
+                <i class="nav-icon fas fa-file-alt"></i>
+                <p>
+                  License
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+        </ul>
+      </nav>
+    </div>
+  </aside>
+<div class="content-wrapper px-4 py-2">
+	<div class="content-header">
+		<h1 class="text-dark">Main Header Component</h1>
+    </div>
+
+    <div class="content px-2">
+		<blockquote class="quote-orange mt-0">
+  <h5>Reminder!</h5>
+  <p>AdminLTE uses all of Bootstrap 4 components. It’s a good start to review the <a href="http://getbootstrap.com">Bootstrap documentation</a> to get an idea of the various components that this documentation <strong>does not</strong> cover.</p>
+</blockquote>
+
+<blockquote class="quote-info">
+  <h5>Tip!</h5>
+  <p>If you go through the example pages and would like to copy a component, right-click on the component and choose “inspect element” to get to the HTML quicker than scanning the HTML page.</p>
+</blockquote>
+
+<p>The main header contains the navbar. Construction of the navbar differs slightly from Bootstrap because it has components that Bootstrap doesn’t provide. The navbar can be constructed in two ways. This is an example for the normal navbar and next we will provide an example for the top nav layout with a logo too.</p>
+
+<nav class="navbar navbar-expand navbar-white navbar-light ml-0">
+  <!-- Left navbar links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="index3.html" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item d-none d-sm-inline-block">
+      <a href="#" class="nav-link">Contact</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Help
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">FAQ</a>
+        <a class="dropdown-item" href="#">Support</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Contact</a>
+      </div>
+    </li>
+  </ul>
+
+  <!-- SEARCH FORM -->
+  <form class="form-inline ml-3">
+    <div class="input-group input-group-sm">
+      <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
+      <div class="input-group-append">
+        <button class="btn btn-navbar" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Right navbar links -->
+  <ul class="navbar-nav ml-auto">
+    <!-- Messages Dropdown Menu -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-comments"></i>
+        <span class="badge badge-danger navbar-badge">3</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <a href="#" class="dropdown-item">
+          <!-- Message Start -->
+          <div class="media">
+            <img src="/assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Brad Diesel
+                <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">Call me whenever you can...</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div>
+          <!-- Message End -->
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <!-- Message Start -->
+          <div class="media">
+            <img src="/assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                John Pierce
+                <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">I got your message bro</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div>
+          <!-- Message End -->
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <!-- Message Start -->
+          <div class="media">
+            <img src="/assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Nora Silvester
+                <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">The subject goes here</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div>
+          <!-- Message End -->
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+      </div>
+    </li>
+    <!-- Notifications Dropdown Menu -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-bell"></i>
+        <span class="badge badge-warning navbar-badge">15</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <span class="dropdown-header">15 Notifications</span>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-envelope mr-2"></i> 4 new messages
+          <span class="float-right text-muted text-sm">3 mins</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-users mr-2"></i> 8 friend requests
+          <span class="float-right text-muted text-sm">12 hours</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-file mr-2"></i> 3 new reports
+          <span class="float-right text-muted text-sm">2 days</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i class="fas fa-th-large"></i></a>
+    </li>
+  </ul>
+</nav>
+
+<div class="language-html max-height-300 highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c">&lt;!-- Navbar --&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"main-header navbar navbar-expand navbar-white navbar-light"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Left navbar links --&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-widget=</span><span class="s">"pushmenu"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-bars"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item d-none d-sm-inline-block"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"index3.html"</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item d-none d-sm-inline-block"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">id=</span><span class="s">"navbarDropdown"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+          Help
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"navbarDropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>FAQ<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Support<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="c">&lt;!-- SEARCH FORM --&gt;</span>
+    <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline ml-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group input-group-sm"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-navbar"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-navbar"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-search"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+
+    <span class="c">&lt;!-- Right navbar links --&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav ml-auto"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- Messages Dropdown Menu --&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"far fa-comments"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-danger navbar-badge"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-lg dropdown-menu-right"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Message Start --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"dist/img/user1-128x128.jpg"</span> <span class="na">alt=</span><span class="s">"User Avatar"</span> <span class="na">class=</span><span class="s">"img-size-50 mr-3 img-circle"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"dropdown-item-title"</span><span class="nt">&gt;</span>
+                  Brad Diesel
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-sm text-danger"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/h3&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>Call me whenever you can...<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"far fa-clock mr-1"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 Hours Ago<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- Message End --&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Message Start --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"dist/img/user8-128x128.jpg"</span> <span class="na">alt=</span><span class="s">"User Avatar"</span> <span class="na">class=</span><span class="s">"img-size-50 img-circle mr-3"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"dropdown-item-title"</span><span class="nt">&gt;</span>
+                  John Pierce
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/h3&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>I got your message bro<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"far fa-clock mr-1"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 Hours Ago<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- Message End --&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Message Start --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"dist/img/user3-128x128.jpg"</span> <span class="na">alt=</span><span class="s">"User Avatar"</span> <span class="na">class=</span><span class="s">"img-size-50 img-circle mr-3"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"dropdown-item-title"</span><span class="nt">&gt;</span>
+                  Nora Silvester
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-sm text-warning"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/h3&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>The subject goes here<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"far fa-clock mr-1"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 Hours Ago<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- Message End --&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item dropdown-footer"</span><span class="nt">&gt;</span>See All Messages<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="c">&lt;!-- Notifications Dropdown Menu --&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"far fa-bell"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-warning navbar-badge"</span><span class="nt">&gt;</span>15<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-lg dropdown-menu-right"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>15 Notifications<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-envelope mr-2"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 new messages
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-muted text-sm"</span><span class="nt">&gt;</span>3 mins<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-users mr-2"</span><span class="nt">&gt;&lt;/i&gt;</span> 8 friend requests
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-muted text-sm"</span><span class="nt">&gt;</span>12 hours<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-file mr-2"</span><span class="nt">&gt;&lt;/i&gt;</span> 3 new reports
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-muted text-sm"</span><span class="nt">&gt;</span>2 days<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item dropdown-footer"</span><span class="nt">&gt;</span>See All Notifications<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-widget=</span><span class="s">"control-sidebar"</span> <span class="na">data-slide=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span>
+            <span class="na">class=</span><span class="s">"fas fa-th-large"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="c">&lt;!-- /.navbar --&gt;</span>
+</code></pre></div></div>
+
+<h4>Top Nav Layout. Main Header Example.</h4>
+
+<blockquote class="quote-orange">
+  <h5>Reminder!</h5>
+  <p>To use this main header instead of the regular one, you must add the <code class="highlighter-rouge">layout-top-nav</code> class to the body tag.</p>
+</blockquote>
+
+<p>Top navbar example can be found in this <a href="https://adminlte.io/themes/dev/AdminLTE/pages/layout/top-nav.html">demo page</a>.</p>
+
+<nav class="navbar navbar-expand navbar-light navbar-white">
+  <div class="container">
+    <a href="index3.html" class="navbar-brand">
+      <img src="/assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Help
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">FAQ</a>
+          <a class="dropdown-item" href="#">Support</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Contact</a>
+        </div>
+      </li>
+    </ul>
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="/assets/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="/assets/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="/assets/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i class="fas fa-th-large"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="language-html max-height-300 highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c">&lt;!-- Navbar --&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"main-header navbar navbar-expand navbar-light navbar-white"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"index3.html"</span> <span class="na">class=</span><span class="s">"navbar-brand"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"dist/img/AdminLTELogo.png"</span> <span class="na">alt=</span><span class="s">"AdminLTE Logo"</span> <span class="na">class=</span><span class="s">"brand-image img-circle elevation-3"</span>
+             <span class="na">style=</span><span class="s">"opacity: .8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"brand-text font-weight-light"</span><span class="nt">&gt;</span>AdminLTE 3<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+
+      <span class="c">&lt;!-- Left navbar links --&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item d-none d-sm-inline-block"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"index3.html"</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item d-none d-sm-inline-block"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">id=</span><span class="s">"navbarDropdown"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+            Help
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"navbarDropdown"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>FAQ<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Support<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+
+      <span class="c">&lt;!-- SEARCH FORM --&gt;</span>
+      <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline ml-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group input-group-sm"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-navbar"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-navbar"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-search"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+
+      <span class="c">&lt;!-- Right navbar links --&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav ml-auto"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Messages Dropdown Menu --&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-comments"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-danger navbar-badge"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-lg dropdown-menu-right"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- Message Start --&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"dist/img/user1-128x128.jpg"</span> <span class="na">alt=</span><span class="s">"User Avatar"</span> <span class="na">class=</span><span class="s">"img-size-50 mr-3 img-circle"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"dropdown-item-title"</span><span class="nt">&gt;</span>
+                    Brad Diesel
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-sm text-danger"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+                  <span class="nt">&lt;/h3&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>Call me whenever you can...<span class="nt">&lt;/p&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"far fa-clock mr-1"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 Hours Ago<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="c">&lt;!-- Message End --&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- Message Start --&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"dist/img/user8-128x128.jpg"</span> <span class="na">alt=</span><span class="s">"User Avatar"</span> <span class="na">class=</span><span class="s">"img-size-50 img-circle mr-3"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"dropdown-item-title"</span><span class="nt">&gt;</span>
+                    John Pierce
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+                  <span class="nt">&lt;/h3&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>I got your message bro<span class="nt">&lt;/p&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"far fa-clock mr-1"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 Hours Ago<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="c">&lt;!-- Message End --&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- Message Start --&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"dist/img/user3-128x128.jpg"</span> <span class="na">alt=</span><span class="s">"User Avatar"</span> <span class="na">class=</span><span class="s">"img-size-50 img-circle mr-3"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"dropdown-item-title"</span><span class="nt">&gt;</span>
+                    Nora Silvester
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-sm text-warning"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+                  <span class="nt">&lt;/h3&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>The subject goes here<span class="nt">&lt;/p&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm text-muted"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"far fa-clock mr-1"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 Hours Ago<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="c">&lt;!-- Message End --&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item dropdown-footer"</span><span class="nt">&gt;</span>See All Messages<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="c">&lt;!-- Notifications Dropdown Menu --&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"far fa-bell"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-warning navbar-badge"</span><span class="nt">&gt;</span>15<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-lg dropdown-menu-right"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>15 Notifications<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-envelope mr-2"</span><span class="nt">&gt;&lt;/i&gt;</span> 4 new messages
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-muted text-sm"</span><span class="nt">&gt;</span>3 mins<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-users mr-2"</span><span class="nt">&gt;&lt;/i&gt;</span> 8 friend requests
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-muted text-sm"</span><span class="nt">&gt;</span>12 hours<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-file mr-2"</span><span class="nt">&gt;&lt;/i&gt;</span> 3 new reports
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"float-right text-muted text-sm"</span><span class="nt">&gt;</span>2 days<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-item dropdown-footer"</span><span class="nt">&gt;</span>See All Notifications<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-widget=</span><span class="s">"control-sidebar"</span> <span class="na">data-slide=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span>
+              <span class="na">class=</span><span class="s">"fas fa-th-large"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="c">&lt;!-- /.navbar --&gt;</span>
+</code></pre></div></div>
+
+<blockquote class="quote-info">
+  <h5>Tip!</h5>
+  <p>To get a bigger dropdown menu you can add <code class="highlighter-rouge">.dropdown-menu-lg</code> or <code class="highlighter-rouge">.dropdown-menu-xl</code> to <code class="highlighter-rouge">.dropdown-menu</code>.</p>
+</blockquote>
+
+    </div>
+</div>
+    <footer class="main-footer">
+      <div class="float-right d-none d-sm-inline">
+        v3.0.0
+      </div>
+      <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
+</div>
+  <script src="/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="/assets/js/adminlte.min.js"></script>
+</body>
+</html>

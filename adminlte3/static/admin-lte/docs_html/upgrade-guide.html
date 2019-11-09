@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Upgrade Guide | AdminLTE 3 Documentation</title>
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Upgrade Guide | AdminLTE v3 Documentaion</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Upgrade Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AdminLTE v3 Documentaion" />
+<meta property="og:description" content="AdminLTE v3 Documentaion" />
+<meta property="og:site_name" content="AdminLTE v3 Documentaion" />
+<script type="application/ld+json">
+{"description":"AdminLTE v3 Documentaion","@type":"WebPage","url":"/upgrade-guide.html","headline":"Upgrade Guide","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/assets/css/docs.css">
+    <link rel="stylesheet" href="/assets/css/highlighter.css">
+    <link rel="stylesheet" href="/assets/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link bg-info rounded dropdown-toggle" href="#" id="navbarVersionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          v3.0
+        </a>
+        <div class="dropdown-menu py-0" aria-labelledby="navbarVersionDropdown">
+          <a class="dropdown-item bg-info disabled" href="#">v3.0</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://adminlte.io/docs/2.4/installation">v2.4</a>
+          <a class="dropdown-item" href="https://adminlte.io/themes/AdminLTE/documentation/index.html"><= v2.3</a>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li> -->
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <!-- <form class="form-check-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form> -->
+    </nav>
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="/index.html" class="brand-link logo-switch">
+      <img src="/assets/img/logo-xs.png" alt="AdminLTE Docs Logo Small" class="brand-image-xl logo-xs">
+      <img src="/assets/img/logo-xl.png" alt="AdminLTE Docs Logo Large" class="brand-image-xs logo-xl" style="left: 12px">
+    </a>
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/index.html" class="nav-link ">
+                <i class="nav-icon fas fa-microchip"></i>
+                <p>
+                  Installation
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/dependencies.html" class="nav-link ">
+                <i class="nav-icon fas fa-handshake"></i>
+                <p>
+                  Dependencies & Plugins
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/layout.html" class="nav-link ">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Layout
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item has-treeview ">
+              
+
+              <a href="/components" class="nav-link ">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Components
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+              
+                <ul class="nav nav-treeview">
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/main-header.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Main Header</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/main-sidebar.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Main Sidebar</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/control-sidebar.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Control Sidebar</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/cards.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Card</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/boxes.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Small-/ Info-Box</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/direct-chat.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Direct Chat</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/timeline.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Timeline</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/ribbons.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Ribbons</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/miscellaneous.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Miscellaneous</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/components/plugins.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Plugins</p>
+                    </a>
+                  </li>
+                
+                </ul>
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item has-treeview ">
+              
+
+              <a href="/javascript" class="nav-link ">
+                <i class="nav-icon fas fa-code"></i>
+                <p>
+                  JavaScript
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+              
+                <ul class="nav nav-treeview">
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/layout.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Layout</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/push-menu.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Push Menu</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/treeview.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Treeview</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/card-widget.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Card Widget</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/card-refresh.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>CardRefresh</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/control-sidebar.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Control Sidebar</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/direct-chat.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Direct Chat</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/todo-list.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Todo List</p>
+                    </a>
+                  </li>
+                
+                  
+                  <li class="nav-item">
+                    <a href="/javascript/toasts.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Toasts</p>
+                    </a>
+                  </li>
+                
+                </ul>
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/browser-support.html" class="nav-link ">
+                <i class="nav-icon fab fa-chrome"></i>
+                <p>
+                  Browser Support
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/upgrade-guide.html" class="nav-link active">
+                <i class="nav-icon fas fa-hand-point-up"></i>
+                <p>
+                  Upgrade Guide
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/implementations.html" class="nav-link ">
+                <i class="nav-icon fas fa-bookmark"></i>
+                <p>
+                  Implementations
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/faq.html" class="nav-link ">
+                <i class="nav-icon fas fa-question-circle"></i>
+                <p>
+                  FAQ
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+            
+            
+
+            <li class="nav-item  ">
+              
+
+              <a href="/license.html" class="nav-link ">
+                <i class="nav-icon fas fa-file-alt"></i>
+                <p>
+                  License
+                  
+                </p>
+              </a>
+
+              
+            </li>
+         
+        </ul>
+      </nav>
+    </div>
+  </aside>
+<div class="content-wrapper px-4 py-2">
+	<div class="content-header">
+		<h1 class="text-dark">Upgrade Guide</h1>
+    </div>
+
+    <div class="content px-2">
+		<h4>Migration from v2.4.x</h4>
+<p>The first step to migrate AdminLTE v2.4.x to v3.0 is upgrade the Bootstrap 3 base code to Bootstrap 4, the full instruction <a href="https://getbootstrap.com/docs/4.3/migration/">here</a> after you upgraded the base code you need to update the markups.</p>
+
+<h5>Main Header</h5>
+<p>The biggest change in Main Header is the Logo is moved to Main Sidebar and the Main Header has now color variations, here are all changes:</p>
+
+<ol>
+  <li>Logo
+    <ul>
+      <li><code class="highlighter-rouge">&lt;a href="index2.html" class="logo"&gt;</code> moved &amp; rebuild to <code class="highlighter-rouge">.brand-link</code> inside <code class="highlighter-rouge">.main-sidebar</code></li>
+    </ul>
+  </li>
+  <li>Header / Nav
+    <ul>
+      <li><code class="highlighter-rouge">&lt;header class="main-header"&gt;</code> &amp; <code class="highlighter-rouge">&lt;nav class="navbar navbar-static-top"&gt;</code> merged with <code class="highlighter-rouge">&lt;nav class="main-header navbar navbar-expand navbar-white navbar-light"&gt;</code></li>
+    </ul>
+  </li>
+  <li>Sidebar Toggle / Left Navbar
+    <ul>
+      <li><code class="highlighter-rouge">&lt;a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"&gt;&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;&lt;/a&gt;</code> replaced with <code class="highlighter-rouge">&lt;ul class="navbar-nav"&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" data-widget="pushmenu" href="#"&gt;&lt;i class="fas fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code></li>
+    </ul>
+  </li>
+  <li>Right Navbar
+    <ul>
+      <li><code class="highlighter-rouge">&lt;div class="navbar-custom-menu"&gt;</code> &amp; <code class="highlighter-rouge">&lt;ul class="nav navbar-nav"&gt;</code> merged with <code class="highlighter-rouge">&lt;ul class="navbar-nav ml-auto"&gt;</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h5>Main Sidebar</h5>
+<p>Like above the biggest change is the Main Sidebar contains now the Logo and the sidebar has now color variations, here all changes:</p>
+
+<ol>
+  <li>Main Sidebar Color
+    <ul>
+      <li><code class="highlighter-rouge">&lt;aside class="main-sidebar"&gt;</code> replaced with <code class="highlighter-rouge">&lt;aside class="main-sidebar sidebar-dark-primary"&gt;</code></li>
+    </ul>
+  </li>
+  <li>Logo / Brand Link
+    <ul>
+      <li><code class="highlighter-rouge">&lt;a href="index3.html" class="brand-link"&gt;&lt;img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"&gt;&lt;span class="brand-text font-weight-light"&gt;AdminLTE 3&lt;/span&gt;&lt;/a&gt;</code> replaces the old logo</li>
+    </ul>
+  </li>
+  <li>Sidebar
+    <ul>
+      <li><code class="highlighter-rouge">&lt;section class="sidebar"&gt;</code> replaced with <code class="highlighter-rouge">&lt;div class="sidebar"&gt;</code></li>
+    </ul>
+  </li>
+  <li>User Panel
+    <ul>
+      <li><code class="highlighter-rouge">&lt;div class="user-panel"&gt;&lt;div class="pull-left image"&gt;&lt;img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"&gt;&lt;/div&gt;&lt;div class="pull-left info"&gt;&lt;p&gt;Alexander Pierce&lt;/p&gt;&lt;a href="#"&gt;&lt;i class="fa fa-circle text-success"&gt;&lt;/i&gt; Online&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</code> replaced with <code class="highlighter-rouge">&lt;div class="user-panel mt-3 pb-3 mb-3 d-flex"&gt;&lt;div class="image"&gt;&lt;img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"&gt;&lt;/div&gt;&lt;div class="info"&gt;&lt;a href="#" class="d-block"&gt;Alexander Pierce&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</code></li>
+    </ul>
+  </li>
+  <li>Sidebar Menu
+    <ul>
+      <li><code class="highlighter-rouge">&lt;nav class="mt-2"&gt;</code> now around <code class="highlighter-rouge">&lt;ul class="sidebar-menu" data-widget="tree"&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;ul class="sidebar-menu" data-widget="tree"&gt;</code> replaced with <code class="highlighter-rouge">&lt;ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;li class="header"&gt;</code> repalced with <code class="highlighter-rouge">&lt;li class="nav-header"&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;li&gt;</code> need a new class <code class="highlighter-rouge">.nav-item</code></li>
+      <li><code class="highlighter-rouge">&lt;li&gt; &lt;a&gt;</code> need a new class <code class="highlighter-rouge">.nav-link</code></li>
+      <li><code class="highlighter-rouge">&lt;li&gt; &lt;a&gt; &lt;i&gt;</code> need a new class <code class="highlighter-rouge">.nav-icon</code></li>
+      <li><code class="highlighter-rouge">&lt;li&gt; &lt;a&gt; &lt;span&gt;</code> replaced with <code class="highlighter-rouge">&lt;p&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;span class="pull-right-container"&gt;</code> removed</li>
+      <li><code class="highlighter-rouge">&lt;i class="fa fa-angle-left pull-right"&gt;&lt;/i&gt;</code> replaced with <code class="highlighter-rouge">&lt;i class="right fas fa-angle-left"&gt;&lt;/i&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;small class="label pull-right bg-green"&gt;new&lt;/small&gt;</code> replaced with <code class="highlighter-rouge">&lt;span class="right badge badge-danger"&gt;New&lt;/span&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;li&gt; &lt;ul class="treeview-menu"&gt;</code> replaced with <code class="highlighter-rouge">&lt;ul class="nav nav-treeview"&gt;</code></li>
+    </ul>
+  </li>
+</ol>
+
+<div class="row">
+  <div class="col-md-6">
+    <p>Old sample entry</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;li&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"pages/widgets.html"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-th"</span><span class="nt">&gt;&lt;/i&gt;</span> <span class="nt">&lt;span&gt;</span>Widgets<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"pull-right-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"label pull-right bg-green"</span><span class="nt">&gt;</span>new<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</code></pre></div>    </div>
+  </div>
+  <div class="col-md-6">
+    <p>New sample entry</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"pages/widgets.html"</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"nav-icon fas fa-th"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Widgets
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"right badge badge-danger"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</code></pre></div>    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <p>Old sample entry (with tree menu)</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"treeview"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-dashboard"</span><span class="nt">&gt;&lt;/i&gt;</span> <span class="nt">&lt;span&gt;</span>Dashboard<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"pull-right-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-left pull-right"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"treeview-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-circle-o"</span><span class="nt">&gt;&lt;/i&gt;</span> Dashboard v1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</code></pre></div>    </div>
+  </div>
+  <div class="col-md-6">
+    <p>New sample entry (with tree menu)</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item has-treeview"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"nav-icon fas fa-tachometer-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Dashboard
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"right fas fa-angle-left"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-treeview"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span> <span class="na">class=</span><span class="s">"nav-link active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"far fa-circle nav-icon"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Dashboard v1<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</code></pre></div>    </div>
+  </div>
+</div>
+
+<h5>Content Header</h5>
+<p>The biggest change in content header is AdminLTE use here now <code class="highlighter-rouge">.container-fluid</code>, <code class="highlighter-rouge">.row</code> &amp; <code class="highlighter-rouge">.col-*</code> and the breadcrumb markup changed, here are all changes:</p>
+<ul>
+  <li><code class="highlighter-rouge">&lt;section class="content-header"&gt;</code> replaced with <code class="highlighter-rouge">&lt;div class="content-header"&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;div class="container-fluid"&gt;</code> added in <code class="highlighter-rouge">&lt;div class="content-header"&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;h1&gt;</code> &amp; <code class="highlighter-rouge">&lt;ol class="breadcrumb"&gt;</code> rebuild in <code class="highlighter-rouge">&lt;div class="row"&gt;</code> &amp; <code class="highlighter-rouge">&lt;div class="col-sm-6"&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;h1&gt;</code> replaced with <code class="highlighter-rouge">&lt;h1 class="m-0 text-dark"&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;ol class="breadcrumb"&gt;</code> need new class <code class="highlighter-rouge">.float-sm-right</code></li>
+  <li><code class="highlighter-rouge">&lt;ol class="breadcrumb"&gt; &lt;li&gt;</code> need new class <code class="highlighter-rouge">.breadcrumb-item</code></li>
+</ul>
+
+<div class="row">
+  <div class="col-md-6">
+    <p>Old Content Header Markup</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"content-header"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>
+    Dashboard
+    <span class="nt">&lt;small&gt;</span>Control panel<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-dashboard"</span><span class="nt">&gt;&lt;/i&gt;</span> Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Dashboard<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div>    </div>
+  </div>
+  <div class="col-md-6">
+    <p>New Content Header Markup</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content-header"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mb-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"m-0 text-dark"</span><span class="nt">&gt;</span>
+          Dashboard
+          <span class="nt">&lt;small&gt;</span>Control panel<span class="nt">&lt;/small&gt;</span>
+        <span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb float-sm-right"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span><span class="nt">&gt;</span>Dashboard v1<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ol&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+  </div>
+</div>
+
+<h5>Content</h5>
+<p>The content has no change, we only split <code class="highlighter-rouge">&lt;section class="content container-fluid"&gt;</code> in two elements:</p>
+<ul>
+  <li><code class="highlighter-rouge">&lt;section class="content"&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;div class="container-fluid"&gt;</code></li>
+</ul>
+
+<h5>Footer</h5>
+<p>The footer has only one little change for the right sided div.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;div class="pull-right hidden-xs"&gt;</code> changed to <code class="highlighter-rouge">&lt;div class="float-right d-none d-sm-inline"&gt;</code></li>
+</ul>
+
+<h5>Miscellaneous</h5>
+<p>Here are some other little css/html changes since v3.0:</p>
+<ul>
+  <li><code class="highlighter-rouge">.label</code> renamed to <code class="highlighter-rouge">.badge</code></li>
+</ul>
+
+<h5>JavaScript Plugins</h5>
+<p>Here are some other little JavaScript changes since v3.0:</p>
+<ul>
+  <li><code class="highlighter-rouge">data-toggle="*"</code> renamed to <code class="highlighter-rouge">data-widget="*"</code> instead of CardWidget items
+    <ul>
+      <li>for CardWidget it’s now <code class="highlighter-rouge">data-card-widget="*"</code></li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+</div>
+    <footer class="main-footer">
+      <div class="float-right d-none d-sm-inline">
+        v3.0.0
+      </div>
+      <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
+</div>
+  <script src="/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="/assets/js/adminlte.min.js"></script>
+</body>
+</html>

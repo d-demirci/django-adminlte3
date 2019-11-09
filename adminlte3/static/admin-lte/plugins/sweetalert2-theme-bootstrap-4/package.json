@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      "@sweetalert2/theme-bootstrap-4@^2.2.1",
+      "/home/n00b/adminlte3-django/django_adminlte3/node_modules/admin-lte"
+    ]
+  ],
+  "_from": "@sweetalert2/theme-bootstrap-4@>=2.2.1 <3.0.0",
+  "_hasShrinkwrap": false,
+  "_id": "@sweetalert2/theme-bootstrap-4@2.2.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@sweetalert2/theme-bootstrap-4",
+  "_nodeVersion": "10.16.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/theme-bootstrap-4_2.2.1_1571335336414_0.12654881468039658"
+  },
+  "_npmUser": {
+    "email": "limon.monte@gmail.com",
+    "name": "limonte"
+  },
+  "_npmVersion": "6.12.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "@sweetalert2/theme-bootstrap-4",
+    "raw": "@sweetalert2/theme-bootstrap-4@^2.2.1",
+    "rawSpec": "^2.2.1",
+    "scope": "@sweetalert2",
+    "spec": ">=2.2.1 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/admin-lte"
+  ],
+  "_resolved": "https://registry.npmjs.org/@sweetalert2/theme-bootstrap-4/-/theme-bootstrap-4-2.2.1.tgz",
+  "_shasum": "a0e3496f2d5aa2993f8fe1c59dcec0673941cddb",
+  "_shrinkwrap": null,
+  "_spec": "@sweetalert2/theme-bootstrap-4@^2.2.1",
+  "_where": "/home/n00b/adminlte3-django/django_adminlte3/node_modules/admin-lte",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/sweetalert2/sweetalert2-themes/issues"
+  },
+  "dependencies": {},
+  "description": "Bootstrap 4 theme for SweetAlert2",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "fileCount": 5,
+    "integrity": "sha512-EzAc/HFO16wuZCmawdv0mxRknXtQ5XYmms8gHCcRBqVJsolwl0xKanH8wC2tf4O6dFLou6ZndNqii8ArQO66pA==",
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdqKypCRA9TVsSAnZWagAAEwoP/2bHYNqr0Ox4tufdT4vv\npfQLzEPE+QnLyYlogFutp31Zmdh1CsATxh5HHTjXm2QSw4YW/gsHR0KaxPBd\nwis4K2GSvCHjsYMJ0GfH7zc7gVOghqlwCg/EIBrS0hXx+IwmaHFnItK4x6o4\nkHAmKv6vMypzvk92Bn7oH+MGt5IoJZVXfb8zR9sXDbsIbWAOthiMgYLKgIUp\nGszzEuXkYhaj96NduEMQ69rxi1q7nIpprZVoTOhkePpKvSgORmSt36BWF1/9\n16zOq6Ev3lSftbAF0mYgr0dXTpX+uplXhFCuOI9UCFZVgNL9pREOivfBpqfr\nNiNaLfqnb9WhrK0FKOL/LR/C8SJH2bgaJCbDeBSwIjOSsWjwmUXU45qEHuAs\nq+fVynQiRCig/mKAt5II/G9k6BaUGSuplDnMuXrPcXvACkadtyHKThKvarOh\nL2yEliGYnJC5o9df6Tvvvg8len1KKgXs5Y8iMW8it6BmcsfsgM1Oe+tnLJvL\npFuO6QHmQVA3aPRIJe/R0RWRaN9bx2KNy7IYqVoERXrZ3dRzPv5o8YMJvF+H\n5nqlFTgpLLpycTlGLuG7EA9TJxfQdBA3zZWjC3EjDXl0dtlJWIi9cvrpDAzs\na6VU4QiPV/1q9CuQx3AkS+zVnjqU9GfP9E/+R7bwoM0oB51QKoFR2Loi5ESv\n6awb\r\n=27/J\r\n-----END PGP SIGNATURE-----\r\n",
+    "shasum": "a0e3496f2d5aa2993f8fe1c59dcec0673941cddb",
+    "tarball": "https://registry.npmjs.org/@sweetalert2/theme-bootstrap-4/-/theme-bootstrap-4-2.2.1.tgz",
+    "unpackedSize": 101802
+  },
+  "homepage": "https://sweetalert2.github.io/",
+  "keywords": [
+    "bootstrap-4",
+    "sass",
+    "sweetalert2",
+    "theme",
+    "themes",
+    "theming"
+  ],
+  "license": "MIT",
+  "main": "bootstrap-4.css",
+  "maintainers": [
+    {
+      "name": "acupajoe",
+      "email": "joseph@acupajoe.io"
+    },
+    {
+      "name": "gverni",
+      "email": "g.verni@gmail.com"
+    },
+    {
+      "name": "limonte",
+      "email": "limon.monte@gmail.com"
+    },
+    {
+      "name": "samturrell",
+      "email": "sam@samturrell.co.uk"
+    },
+    {
+      "name": "toverux",
+      "email": "morgan.touverey@outlook.fr"
+    },
+    {
+      "name": "zen_flow",
+      "email": "zenflow87@gmail.com"
+    }
+  ],
+  "name": "@sweetalert2/theme-bootstrap-4",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweetalert2/sweetalert2-themes.git"
+  },
+  "version": "2.2.1"
+}

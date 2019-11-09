@@ -1,0 +1,189 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+{% load admin_menu %}
+
+{% block extrastyle %}
+{{ block.super }}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'admin/css/dashboard.css' %}" /> -->
+{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="row mb-2">
+    <div class="col-sm-4">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="col-sm-8">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
+            {% for app in app_list %}
+            <li class="breadcrumb-item active">{{ app.name }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+{% endblock %}
+{% endif %}
+
+
+{% block content %}
+<div id="content-main" class="container-fluid">
+    <div class="row">
+        {% if app_list %}
+        {% for app in app_list %}
+
+        <div class="card card-widget col-md-12">
+            <div class="card-header ">
+                <h3 class="card-title"><a href="{{ app.app_url }}" class="nav-link"
+                        title="{% blocktrans with name=app.name %}Models in the {{ name }} application{% endblocktrans %}">{{ app.name }}</a>
+                </h3>
+
+                <div class="card-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="card-body">
+                <div class="row">
+                    {% for model in app.models %}
+
+                    <div class="col-md-4 col-sm-6 model-box">
+
+                        <div class="info-box bg-secondary">
+                            <span class="info-box-icon">{% autoescape off %}{% icon %}{% endautoescape %}</span>
+                            <div class="info-box-content">
+                                <a href="{{ model.admin_url }}">
+                                    <span class="info-box-text text-light">{{ model.name }}</span>
+                                </a>
+                                {% if model.add_url %}
+                                <a href="{{ model.add_url }}" class="btn btn-default btn-xs btn-block"><i
+                                        class="fa fa-plus"></i> {%trans 'Add' %}</a>
+                                {% endif %}
+                                {% if model.admin_url %}
+                                <a href="{{ model.admin_url }}" class="btn btn-warning btn-xs btn-block"><i
+                                        class="fa fa-pencil"></i>
+                                    {%trans 'Change' %}</a>
+                                {% endif %}
+                            </div>
+
+                            <!-- /.info-box-content -->
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+
+                {% comment %}<div class="app-{{ app.app_label }} module">
+                    <table class="table table-hover table-striped">
+                        <caption>
+                            <a href="{{ app.app_url }}" class="section"
+                                title="{% blocktrans with name=app.name %}Models in the {{ name }} application{% endblocktrans %}">{{ app.name }}</a>
+                        </caption>
+                        {% for model in app.models %}
+                        <tr class="model-{{ model.object_name|lower }}">
+                            {% if model.admin_url %}
+                            <th scope="row"><a href="{{ model.admin_url }}">{{ model.name }}</a></th>
+                            {% else %}
+                            <th scope="row">{{ model.name }}</th>
+                            {% endif %}
+
+                            {% if model.add_url %}
+                            <td><a href="{{ model.add_url }}" class="btn btn-success btn-xs"><i class="fa fa-plus"></i>
+                                    {% trans 'Add' %}</a></td>
+                            {% else %}
+                            <td>&nbsp;</td>
+                            {% endif %}
+
+                            {% if model.admin_url %}
+                            <td><a href="{{ model.admin_url }}" class="btn btn-warning btn-xs"><i
+                                        class="fa fa-pencil"></i>
+                                    {% trans 'Change' %}</a></td>
+                            {% else %}
+                            <td>&nbsp;</td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>{% endcomment %}
+                {% endfor %}
+                {% else %}
+                <p>{% trans "You don't have permission to edit anything." %}</p>
+                {% endif %}
+                <!-- /.box-body -->
+            </div>
+        </div>
+
+
+        {% block sidebar %}
+
+        <div class="card card-widget col-md-12">
+            <div class="card-header ">
+                <h2 class="card-title">{% trans 'Recent actions' %} / </h2>
+                <h3 class="card-title"> {% trans 'My actions' %}</h3>
+                <h3 class="card-title"><a href="{{ app.app_url }}" class="nav-link"
+                        title="{% blocktrans with name=app.name %}Models in the {{ name }} application{% endblocktrans %}">{{ app.name }}</a>
+                </h3>
+
+                <div class="card-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        {% load log %}
+                        {% get_admin_log 10 as admin_log for_user user %}
+                        {% if not admin_log %}
+                        <p>{% trans 'None available' %}</p>
+                        {% else %}
+                        <div class="timeline">
+                            {% for entry in admin_log %}
+                            <div>
+                                <i
+                                    class="fas fa-{% if entry.is_addition %}plus bg-blue{% endif %}{% if entry.is_change %}edit bg-green{% endif %}{% if entry.is_deletion %}minus bg-red{% endif %} "></i>
+                                <div class="timeline-item">
+                                    <span class="time"><i class="fas fa-clock"></i> {{entry.action_time}}</span>
+
+                                    <div class="timeline-body">
+                                        <a href="#">{{entry.user}}</a>
+                                        {% if entry.is_addition %}added{% endif %}{% if entry.is_change %}edited
+                                        {% endif %}{% if entry.is_deletion %}deleted{% endif %}
+                                        {% if entry.is_deletion or not entry.get_admin_url %}
+                                        {{ entry.object_repr }}
+                                        {% else %}
+                                        <a href="{{ entry.get_admin_url }}">{{ entry.object_repr }}</a>
+                                        {% endif %}
+                                        <br />
+                                        {% if entry.content_type %}
+                                        <span class="mini quiet">{% filter capfirst %}
+                                            {{ entry.content_type }}{% endfilter %}</span>
+                                        {% else %}
+                                        <span class="mini quiet">{% trans 'Unknown content' %}</span>
+                                        {% endif %}
+
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endblock %}
+
+    </div>
+
+    {% endblock %}

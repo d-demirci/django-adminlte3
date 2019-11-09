@@ -1,26 +1,10 @@
-include *.txt
-include *.rst
-recursive-include docs *
-include VERSION
-
-# added by check_manifest.py
-include *.json
-include *.md
-include *.py
-recursive-include django_adminlte *.css
-recursive-include django_adminlte *.eot
-recursive-include django_adminlte *.gif
-recursive-include django_adminlte *.html
-recursive-include django_adminlte *.jpg
-recursive-include django_adminlte *.js
-recursive-include django_adminlte *.map
-recursive-include django_adminlte *.md
-recursive-include django_adminlte *.otf
-recursive-include django_adminlte *.png
-recursive-include django_adminlte *.py
-recursive-include django_adminlte *.svg
-recursive-include django_adminlte *.ttf
-recursive-include django_adminlte *.woff
-recursive-include django_adminlte *.woff2
-recursive-include django_adminlte_theme *.html
-recursive-include example_project *.html
+include LICENSE
+include README.rst
+recursive-include adminlte3 *.py
+recursive-include adminlte3/static *
+recursive-include adminlte3/templates *
+recursive-include adminlte3/templatetags *
+recursive-include adminlte3_theme *.py
+recursive-include adminlte3_theme/static *
+recursive-include adminlte3_theme/templates *
+recursive-include adminlte3_theme/templatetags *

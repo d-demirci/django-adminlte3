@@ -1,0 +1,50 @@
+{% extends 'adminlte/base.html' %}
+{% load static i18n %}
+
+{% block extra_head %}
+{{ block.super }}
+
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" type="text/css"
+    href="{% block stylesheet_rtl %}{% static 'admin/css/rtl.css' %}{% endblock %}" />
+{% endif %}
+<link rel="stylesheet" type="text/css"
+    href="{% static 'admin/css/base.css' %}" />
+{% block extrastyle %}{% endblock %}
+{% block extrahead %}{% endblock %}
+{% block blockbots %}
+<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+{% endblock %}
+
+{% block nav_header %}
+{% include 'admin/lib/_main_header.html' %}
+{% endblock %}
+
+{% block nav_sidebar %}
+{% include 'admin/lib/_main_sidebar.html' %}
+{% endblock %}
+
+{% block content_header %}
+<section class="content-header">
+    <div class="container-fluid">
+        {% block breadcrumbs %}
+        <ol class="breadcrumb">
+            <li><a href="{% url 'admin:index' %}"><i class="fas ffa-tachometer-alt"></i> {% trans 'Home' %}</a></li>
+            {% if title %}  {{ title }}{% endif %}
+        </ol>
+        {% endblock %}
+    </div>
+</section>
+
+{% endblock %}
+
+{% block content_block_wrap %}
+
+    {% block content %}
+        {% block object-tools %}{% endblock %}
+        {{ content }}
+        {% block sidebar %}{% endblock %}
+    {% endblock %}
+
+
+{% endblock %}
