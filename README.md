@@ -1,7 +1,7 @@
 AdminLTE Templates, Template Tags, and Admin Theme for Django
 =============================================================
 
-[![pypi_badge](https://badge.fury.io/py/django-adminlte3.png)](pypi.python.org/pypi/django-adminlte3)
+[![pypi_badge](https://badge.fury.io/py/django-adminlte3.png)](https://pypi.python.org/pypi/django-adminlte3)
 
 Django AdminLTE3 provides the functionality of the AdminLTE3 theme
 to developers in the form of standard base templates. Optional styling for
