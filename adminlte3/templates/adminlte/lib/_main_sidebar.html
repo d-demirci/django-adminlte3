@@ -33,22 +33,33 @@
             <li class="nav-header">{% block nav_heading %}MAIN NAVIGATION{% endblock %}</li>
 
             {% block nav_links %}
-                <li>
-                    <a href="#">
-                        <i class="fa fa-dashboard"></i> <p>Example link</p>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i> 
+                        <p>Example link</p>
                     </a>
                 </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-group"></i> <p>Sub menu</p>
-                        <p class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
+                <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-tachometer-alt"></i> 
+                            <p>Example link active</p>
+                        </a>
+                    </li>
+                <li class="nav-item has-tree-view ">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-object-group"></i> <p>Sub menu</p>
+                        <p><i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-user"></i> Another link
+                    <ul class="nav nav-treeview menu-open">
+                            <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-circle"></i> link
+                                    </a>
+                                </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-user"></i> Another link
                             </a>
                         </li>
                     </ul>

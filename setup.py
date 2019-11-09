@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
-    name='django-adminlte3',
+    name='django-adminlte-3',
     version=open('VERSION').read().strip(),
     author='d3n1z',
     author_email='d3n1z@protonmail.com',
@@ -22,4 +22,5 @@ setup(
     install_requires=[
         'django',
     ],
+    python_requires='>=3.6',
 )

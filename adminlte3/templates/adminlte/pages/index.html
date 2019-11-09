@@ -1,14 +1,16 @@
 {% extends 'adminlte/base.html' %}
 
 {% block content %}
-    <div class="box">
-        <div class="box-body">
+    <div class="card">
+        <div class="card-body">
             <table class="table table-bordered">
-                <tr>
+                <thead><tr>
                     <th>#</th>
-                    <th>页面URL</th>
-                    <th>操作</th>
+                    <th>Title</th>
+                    <th>Url</th>
                 </tr>
+            </thead>
+            <tbody>
                 {% for page in pager.items %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
@@ -16,10 +18,17 @@
                         <td><a href="{% url 'adminlte.example.page.edit' page_id=page.id %}">编辑</a></td>
                     </tr>
                 {% endfor %}
+            </tbody>
+            <thead><tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Url</th>
+            </tr>
+        </thead>
             </table>
         </div>
         <!-- /.box-body -->
-        <div class="box-footer clearfix">
+        <div class="card-footer clearfix">
             {% include 'adminlte/lib/_pagination.html' %}
         </div>
     </div>
