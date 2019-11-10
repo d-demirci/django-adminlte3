@@ -49,14 +49,23 @@ This project a based heavily on work by the following:
 * beastbikes for [django-adminlte]
 * adamcharnock for [django-adminlte2]
 
-django-adminlte3 is packaged using twine.
 
   [django_adminlte_x]: https://github.com/dnaextrim/django_adminlte_x
   [django-adminlte]: https://github.com/beastbikes/django-adminlte/
-  [base template2]: https://github.com/adamcharnock/django-adminlte2/blob/master/django_adminlte/templates/adminlte/base.html
+  [django-adminlte2]: https://github.com/adamcharnock/
   [base template]: https://github.com/d-demirci/django-adminlte3/blob/master/adminlte3/templates/adminlte/base.html
 
-screenshots
-![admin screenshot](https://user-images.githubusercontent.com/24219129/68517929-b39f4480-029a-11ea-9c34-4961fb3f5bf6.png)
+Screenshots
+-----------
+Admin Area:
+    
+* Home :![admin screenshot](https://user-images.githubusercontent.com/24219129/68544333-214e8c00-03d3-11ea-91a1-4cfb94d2b136.png)
 
-![model screenshot](https://user-images.githubusercontent.com/24219129/68517976-e6e1d380-029a-11ea-8cde-b8373fce301b.png)
+* Model :![model screenshot](https://user-images.githubusercontent.com/24219129/68544364-77233400-03d3-11ea-97b3-350884c68f6a.png)
+
+* Editing Model: ![model edit](https://user-images.githubusercontent.com/24219129/68544387-b6518500-03d3-11ea-9f28-27df1d996b06.png)
+
+
+Site Area:
+
+* Landing: ![site area](https://user-images.githubusercontent.com/24219129/68544298-cd43a780-03d2-11ea-8506-3abfa341a914.png)

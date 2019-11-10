@@ -1,5 +1,40 @@
 {% extends 'adminlte/lib/_main_header.html' %}
+{% load adminlte_helpers i18n %}
 
-{% block logout_url %}
-    {% url 'admin:logout' %}
-{% endblock logout_url %}
+{% block header_dropdowns %}
+{% block user_info %}
+            {% if request.user.is_authenticated %}
+            <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-user fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="{%avatar_url size=128 %}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                            {% firstof request.user.get_short_name request.user.get_username %}
+                                        <span class="float-right text-sm text-danger"><i class="fas fa-online"></i></span>
+                                    </h3>
+                                    <p class="text-sm"><small>Member since :</small></p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  <small>{{ request.user.date_joined }}</small></p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-footer">
+                                <a href="{% block change_password_url %}{% url 'admin:password_change' %}{% endblock %}" class="btn btn-primary btn-sm">{% trans 'Change password' %}</a>
+                                <a  href="{% block logout_url %}{% url 'admin:logout' %}{% endblock %}" class="btn btn-danger btn-sm">{%trans 'Sign out'%}</a>
+                            </div>
+                        
+                    </div>
+                </li>
+            {% endif %}
+            {% endblock user_info %}
+
+{% endblock header_dropdowns %}
+
+

@@ -111,7 +111,7 @@
                     {% result_list cl %}
                     {% if action_form and actions_on_bottom and cl.show_admin_actions %}{% admin_actions %}{% endif %}
                 {% endblock %}
-                <!-- {% block pagination %}{% pagination cl %}{% endblock %} -->
+                 {% block pagination %}{% pagination cl %}{% endblock %}
             </form>
         </div>
     </div>
@@ -124,16 +124,26 @@
 <script>
 
 $(function () {
-  $('#result_list').DataTable();
-//   {
-//       "paging": true,
+  $('#result_list').DataTable(
+   {
+      "paging": false,
 //       "lengthChange": false,
 //       "searching": false,
 //       "ordering": true,
 //       "info": true,
 //       "autoWidth": false,
-//     });
+     });
   });
+  
+
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('#result_list_wrapper').children().filter(':last-child').remove();
+        $('#result_list_wrapper').children().filter(':last-child').append($('.paginator'));
+        $('.paginator').addClass('col-md-12');
+});
 
 </script>
 {% endblock %}
