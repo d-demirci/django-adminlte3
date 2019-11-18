@@ -140,9 +140,14 @@ $(function () {
 
 <script>
     $(document).ready(function(){
-        $('#result_list_wrapper').children().filter(':last-child').remove();
-        $('#result_list_wrapper').children().filter(':last-child').append($('.paginator'));
+        $.each($('#result_list_wrapper').children().filter(':last-child').children(), function( k, v ) {
+            v.remove();
+        });
+        $('.card').append($('<div class="card-footer"></div>'));
+        $('.card-footer').append($('.paginator'));
+        $('.card-footer').addClass('text-center')
         $('.paginator').addClass('col-md-12');
+
 });
 
 </script>
