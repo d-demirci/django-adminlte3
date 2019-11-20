@@ -25,6 +25,10 @@ Add to installed apps:
         ...
     ]
 
+Don't forget to collect static
+    
+    python manage.py collectstatic 
+
 Usage
 -----
 
