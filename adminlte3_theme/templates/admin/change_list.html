@@ -148,6 +148,16 @@ $(function () {
         $('.card-footer').addClass('text-center')
         $('.paginator').addClass('col-md-12');
 
+        // moving actions div to the header of datatable
+        try{
+            $('.dataTables_wrapper :first-child :first-child')[0].remove();
+            $actions = $('.actions');
+            $actions.addClass('col-sm-6 col-md-6');
+            $actions.prependTo($('.dataTables_wrapper :first-child')[0]);
+        }catch(err){
+            // so no data yet 
+        }
+
 });
 
 </script>
