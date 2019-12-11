@@ -55,7 +55,11 @@
                     <div class="col-md-4 col-sm-6 model-box">
 
                         <div class="info-box bg-secondary">
-                            <span class="info-box-icon">{% autoescape off %}{% icon %}{% endautoescape %}</span>
+                                
+                            <span class="info-box-icon">
+                                <a href="{{ model.admin_url }}">{% autoescape off %}{% icon %}{% endautoescape %}</a>
+                            </span>
+                        
                             <div class="info-box-content">
                                 <a href="{{ model.admin_url }}">
                                     <span class="info-box-text text-light">{{ model.name }}</span>
