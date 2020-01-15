@@ -139,7 +139,7 @@
                                             {% firstof request.user.get_short_name request.user.get_username %}
                                         <span class="float-right text-sm text-danger"><i class="fas fa-online"></i></span>
                                     </h3>
-                                    <p class="text-sm"><small>Member since :</small></p>
+                                    <p class="text-sm"><small>{% trans 'Member since' %} :</small></p>
                                     <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  <small>{{ request.user.date_joined }}</small></p>
                                 </div>
                             </div>
