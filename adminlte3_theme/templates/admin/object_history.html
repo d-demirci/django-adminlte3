@@ -1,15 +1,26 @@
 {% extends "admin/base_site.html" %}
-{% load i18n admin_urls %}
-
-{% block breadcrumbs %}
-<ol class="breadcrumb">
-<li><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
-<li><a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a></li>
-<li><a href="{% url opts|admin_urlname:'changelist' %}">{{ module_name }}</a></li>
-<li><a href="{% url opts|admin_urlname:'change' object.pk|admin_urlquote %}">{{ object|truncatewords:"18" }}</a></li>
-<li class="active">{% trans 'History' %}</li>
-</ol>
+{% load i18n static admin_urls %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.css' %}">
 {% endblock %}
+{% block breadcrumbs %}
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h2>{{title}}</h2>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="{% url 'admin:index' %}"><i class="fas fa-tachometer-alt"></i> {% trans 'Home' %}</a></li>
+                {% if cl.opts.app_config.verbose_name %}
+                <li class="breadcrumb-item"><a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ cl.opts.app_config.verbose_name }}</a></li>
+                {% endif %}
+                <li class="breadcrumb-item"><a href="{% url opts|admin_urlname:'changelist' %}">{{ module_name }}</a></li>
+                <li class="breadcrumb-item" ><a href="{% url opts|admin_urlname:'change' object.pk|admin_urlquote %}">{{ object|truncatewords:"18" }}</a></li> 
+            </ol>
+        </div>
+    </div>    
+{% endblock %}
+
 
 {% block content %}
 <div id="content-main" class="box box-primary">
@@ -39,4 +50,26 @@
 {% endif %}
 </div>
 </div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="{% static 'admin-lte/plugins/datatables/jquery.dataTables.js' %}"></script>
+<script src="{% static 'admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.js' %}"></script>
+<script>
+
+$(function () {
+  $('#change-history').DataTable(
+   {
+      "paging": false,
+//       "lengthChange": false,
+//       "searching": false,
+//       "ordering": true,
+//       "info": true,
+//       "autoWidth": false,
+     });
+  });
+  
+
+</script>
 {% endblock %}

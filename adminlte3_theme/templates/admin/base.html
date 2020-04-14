@@ -29,7 +29,7 @@
     <div class="container-fluid">
         {% block breadcrumbs %}
         <ol class="breadcrumb">
-            <li><a href="{% url 'admin:index' %}"><i class="fas ffa-tachometer-alt"></i> {% trans 'Home' %}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'admin:index' %}"><i class="fas fa-tachometer-alt"></i> {% trans 'Home' %}</a></li>
             {% if title %}  {{ title }}{% endif %}
         </ol>
         {% endblock %}

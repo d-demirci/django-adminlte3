@@ -127,7 +127,10 @@ td ul.errorlist li {
     border-bottom: 1px solid #eee;
     background: none;
 }
-
+.form-row.errors ul.errorlist  {
+    margin-left: 0;
+    padding-right: 10px;
+}
 .form-row.errors ul.errorlist li {
     padding-left: 0;
 }

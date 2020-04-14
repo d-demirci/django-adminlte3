@@ -1,0 +1,40 @@
+<div class="card card-info">
+    <div class="card-header bg-primary">
+        <h3 class="card-title">{% if fieldset.name %}{{ fieldset.name }}{% endif %}</h3>
+        {% if fieldset.description %}
+        <div class="description">{{ fieldset.description|safe }}</div>
+        {% endif %}
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+            </button>
+          </div>
+    </div>
+    <div class="card-body">
+        {% for line in fieldset %}
+        <div
+            class="form-group row form-row{% if line.fields|length_is:'1' and line.errors %} has_error errors{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% endfor %}">
+            {% if line.fields|length_is:'1' %}{{ line.errors }}{% endif %}
+            {% for field in line %}
+            <label for="{{field.field.name}}" class="col-sm-2 col-form-label">{{ field.label_tag }}</label>
+            <div class="col-sm-10">
+                {% if field.is_checkbox %}
+                {{ field.field }}
+                {% else %}
+
+                {% if field.is_readonly %}
+                <div class="readonly">{{ field.contents }}</div>
+                {% else %}
+                {{ field.field }}
+                {% endif %}
+                {% endif %}
+                {% if field.field.help_text %}
+                <div class="help">{{ field.field.help_text|safe }}</div>
+                {% endif %}
+            </div>
+
+
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

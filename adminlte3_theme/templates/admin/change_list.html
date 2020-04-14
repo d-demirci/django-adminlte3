@@ -36,7 +36,7 @@
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="{% url 'admin:index' %}" >{% trans 'Home' %}</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'admin:index' %}"><i class="fas fa-tachometer-alt"></i> {% trans 'Home' %}</a></li>
                 <li class="breadcrumb-item"><a href="{% url 'admin:app_list' app_label=cl.opts.app_label %}">{{ cl.opts.app_config.verbose_name }}</a></li>
                 <li class="breadcrumb-item active">{{ cl.opts.verbose_name_plural|capfirst }}</li>  
             </ol>
@@ -62,7 +62,7 @@
             {% block search %}{% search_form cl %}{% endblock %}
             <!--  -->
             {% block object-tools %}
-            <div class="col-md-{% if cl.has_filters %}4{% else %}12{% endif %}">
+            <div class="col-md-{% if cl.has_filters %}4{% else %}4{% endif %}">
                     {% if cl.has_filters %}
                     <span class="float-sm-right">
                             <a href="#"
