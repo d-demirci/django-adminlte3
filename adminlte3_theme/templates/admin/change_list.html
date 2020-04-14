@@ -67,7 +67,7 @@
                     <span class="float-sm-right">
                             <a href="#"
                             class="btn btn-success btn-sm text-light ml-2" data-toggle="collapse" data-target="#changelist-filter" aria-expanded="false" aria-controls="changelist-filter">
-                                <i class="far fa-filter"></i>
+                                <i class="fas fa-filter"></i>
                                 {% trans 'Filter' %}
                             </a>
                         </span>
@@ -78,7 +78,7 @@
                                 {% url cl.opts|admin_urlname:'add' as add_url %}
                                 <a href="{% add_preserved_filters add_url is_popup to_field %}"
                                 class="btn btn-primary btn-sm text-light">
-                                    <i class="far fa-plus"></i>
+                                    <i class="fas fa-plus"></i>
                                     {% blocktrans with cl.opts.verbose_name as name %}Add {{ name }}{% endblocktrans %}
                                 </a>
                             </span>
