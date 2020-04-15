@@ -1,6 +1,11 @@
 Introduction
 ============
 
+[![Build Status](https://img.shields.io/travis/ColorlibHQ/AdminLTE/master.svg)](https://travis-ci.org/ColorlibHQ/AdminLTE)
+[![npm version](https://img.shields.io/npm/v/admin-lte/latest.svg)](https://www.npmjs.com/package/admin-lte)
+[![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
+[![CDNJS](https://img.shields.io/cdnjs/v/admin-lte.svg)](https://cdnjs.com/libraries/admin-lte)
+
 **AdminLTE** is a fully responsive administration template. Based on **[Bootstrap 4](https://getbootstrap.com)** framework.
 Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops.
 
@@ -8,7 +13,7 @@ Highly customizable and easy to use. Fits many screen resolutions from small mob
 
 Looking for Premium Templates?
 ------------------------------
-AdminLTE.io just opened a new premium templates page. Hand picked to insure the best quality and the most affordable
+AdminLTE.io just opened a new premium templates page. Hand picked to ensure the best quality and the most affordable
 prices. Visit https://adminlte.io/premium for more information.
 
 !["AdminLTE Presentation"](https://adminlte.io/AdminLTE3.png "AdminLTE Presentation")
@@ -70,8 +75,14 @@ Contribution are always **welcome and recommended**! Here is how:
 - Make your changes
 - Create a pull request
 
-#### Contribution Requirements:
+#### Compile dist files
+To compile the dist files you need nodejs/npm, clone/download the repo then:
 
+1. `npm install` (install npm deps)
+2. _Optional:_ `npm run dev` (developer mode, autocompile with browsersync support for live demo)
+3. `npm run production` (compile css/js files)
+
+#### Contribution Requirements:
 - When you contribute, you agree to give a non-exclusive license to AdminLTE.io to use that contribution in any context as we (AdminLTE.io) see appropriate.
 - If you use content provided by another party, it must be appropriately licensed using an [open source](http://opensource.org/licenses) license.
 - Contributions are only accepted through Github pull requests.
