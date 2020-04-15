@@ -414,7 +414,7 @@ span.clearable-file-input label {
 }
 
 .calendar td.selected a {
-    background: #79aec8;
+    background: #007bff;
     color: #fff;
 }
 
@@ -436,7 +436,7 @@ span.clearable-file-input label {
 
 .calendar td a:focus, .timelist a:focus,
 .calendar td a:hover, .timelist a:hover {
-    background: #79aec8;
+    background: #007bff;
     color: white;
 }
 
