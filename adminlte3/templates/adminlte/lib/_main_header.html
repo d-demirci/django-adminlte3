@@ -122,38 +122,45 @@
                 </div>
               </li>
             {% block user_info %}
+
             {% if request.user.is_authenticated %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-user"> {% firstof request.user.get_short_name request.user.get_username %}</i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <li class="nav-item dropdown user-menu">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                  <img src="{%avatar_url 128 %}" class="user-image img-circle elevation-2" alt="User Image">
+                  <span class="d-none d-md-inline">{% firstof request.user.get_short_name request.user.get_username %}</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                  <!-- User image -->
+                  <li class="user-header bg-primary">
+                    <img src="{%avatar_url size=160 %}" class="img-circle elevation-2" alt="User Image">
 
-                        <a href="#" class="dropdown-item">
-                            <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle" src="{%avatar_url size=128 %}" alt="User profile picture">
-                            </div>
-                            <h3 class="profile-username text-center">{% firstof request.user.get_short_name request.user.get_username %}</h3>
-                            <p class="text-muted text-center">Software Engineer</p>
-                            <div class="dropdown-divider"></div>
-                            <!-- Message Start -->
-                            <div class="media">
-                                <div class="media-body">
-                                    <p class="text-sm"><small>{% trans 'Member since' %} : </small></p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  <small>{{ request.user.date_joined }}</small></p>
-                                </div>
-                            </div>
-                            <!-- Message End -->
-
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-footer">
-                            <a href="{% block change_password_url %}{% url 'admin:password_change' %}{% endblock %}" class="btn btn-primary btn-sm">{% trans 'Change password' %}</a>
-                            <a href="{% block logout_url %}{% logout_url %}{% endblock %}" class="btn btn-danger btn-sm">{%trans 'Sign out'%}</a>
-                        </div>
-
+                    <p>
+                        {% firstof request.user.get_short_name request.user.get_username %} - {% firstof request.user.get_role %}
+                      <small>Member since : {{ request.user.date_joined }}</small>
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+                  <li class="user-body">
+                    <div class="row">
+                      <div class="col-4 text-center">
+                        <a href="#">Profile</a>
+                      </div>
+                      <div class="col-4 text-center">
+                        <a href="#">Team</a>
+                      </div>
+                      <div class="col-4 text-center">
+                        <a href="#">Friends</a>
+                      </div>
                     </div>
-                </li>
+                    <!-- /.row -->
+                  </li>
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <a href="{% block change_password_url %}{% url 'admin:password_change' %}{% endblock %}" class="btn btn-default btn-flat">{% trans 'Change Password'%}</a>
+                    <a href="{% block logout_url %}{% logout_url %}{% endblock %}" class="btn btn-default btn-flat float-right">{% trans 'Sign Out'%}<a>
+                  </li>
+                </ul>
+              </li>
             {% endif %}
             {% endblock user_info %}
             {% endblock header_dropdowns %}
