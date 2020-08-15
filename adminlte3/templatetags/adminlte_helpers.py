@@ -11,7 +11,7 @@ register = template.Library()
 
 @register.simple_tag()
 def logout_url():
-    return getattr(settings, 'LOGOUT_URL', '/logout/')
+    return getattr(settings, 'LOGOUT_URL', '/admin/logout/')
 
 
 @register.simple_tag(takes_context=True)
