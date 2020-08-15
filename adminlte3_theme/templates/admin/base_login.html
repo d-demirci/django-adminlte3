@@ -7,8 +7,10 @@
     <title>{% block title %}{% endblock %}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="{% static 'admin-lte/plugins/fontawesome-free/css/fontawesome.min.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'admin-lte/plugins/fontawesome-free/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'admin-lte/dist/css/adminlte.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,16 +25,18 @@
         <a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a>
     </div>
     <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+    <div class="card">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">Sign in to start your session</p>
 
-        {% block content %}
-            {% block object-tools %}{% endblock %}
-            {{ content }}
-        {% endblock %}
-        <!-- /.login-box-body -->
+            {% block content %}
+                {% block object-tools %}{% endblock %}
+                {{ content }}
+            {% endblock %}
+            <!-- /.login-box-body -->
+        </div>
+        <!-- /.login-box -->
     </div>
-    <!-- /.login-box -->
 
     <script src="{% static 'admin-lte/plugins/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'admin-lte/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
