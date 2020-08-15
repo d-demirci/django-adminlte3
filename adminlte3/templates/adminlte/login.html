@@ -12,50 +12,89 @@
         </div>
         {% endblock %}
         <!-- /.login-logo -->
-        <div class="login-box-body">
-            {% block login_errors %}
-                {% if form.errors and not form.non_field_errors %}
-                    <p class="alert alert-danger">
-                        {% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}
-                            {% trans "Please correct the errors below." %}{% endif %}
-                    </p>
-                {% endif %}
-
-                {% if form.non_field_errors %}
-                    {% for error in form.non_field_errors %}
+        <div class="card">
+            <div class="card-body login-card-body">
+                {% block login_errors %}
+                    {% if form.errors and not form.non_field_errors %}
                         <p class="alert alert-danger">
-                            {{ error }}
+                            {% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}
+                                {% trans "Please correct the errors below." %}{% endif %}
                         </p>
-                    {% endfor %}
-                {% endif %}
-            {% endblock login_errors %}
-
-            {% block login_form %}
-                <form action="" method="post">
-                    {% csrf_token %}
-                    {% if message %}
-                        <p class="login-box-msg" style="color: red;">{{ message }}</p>
                     {% endif %}
-                    <div class="form-group has-feedback">
-                        <input name="username" class="form-control" placeholder="{% trans 'Username' %}">
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="password" name="password" class="form-control" placeholder="{% trans 'Password' %}">
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-8">
-                            {% block login_form_links %}
-                            {% endblock %}
-                        </div>
-                        <div class="col-xs-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">{% trans 'Login' %}</button>
-                        </div>
-                    </div>
-                </form>
-            {% endblock login_form %}
 
+                    {% if form.non_field_errors %}
+                        {% for error in form.non_field_errors %}
+                            <p class="alert alert-danger">
+                                {{ error }}
+                            </p>
+                        {% endfor %}
+                    {% endif %}
+                {% endblock login_errors %}
+                <p class="login-box-msg">Sign in to start your session</p>
+                {% block login_form %}
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {% if message %}
+                            <p class="login-box-msg" style="color: red;">{{ message }}</p>
+                        {% endif %}
+                        <div class="input-group mb-3">
+                          <input type="email" class="form-control" placeholder="{% trans 'Email' %}">
+                          <div class="input-group-append">
+                            <div class="input-group-text">
+                              <span class="fas fa-envelope"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <input type="password" class="form-control" placeholder="{% trans 'Password' %}">
+                          <div class="input-group-append">
+                            <div class="input-group-text">
+                              <span class="fas fa-lock"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8">
+                                {% block login_form_links %}
+                                {% endblock %}
+                            </div>
+                            <div class="col-8">
+                                <div class="icheck-primary">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember">
+                                        Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-primary btn-block">{% trans 'Sign In' %}</button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </form>
+                {% endblock login_form %}
+                <div class="social-auth-links text-center mb-3">
+                    <p>- OR -</p>
+                    <a href="#" class="btn btn-block btn-primary">
+                      <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                    </a>
+                    <a href="#" class="btn btn-block btn-danger">
+                      <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                    </a>
+                </div>
+                <!-- /.social-auth-links -->
+                <p class="mb-1">
+                    <a href="forgot-password.html">I forgot my password</a>
+                </p>
+                <p class="mb-0">
+                    <a href="register.html" class="text-center">Register a new membership</a>
+                </p>
+
+            </div>
+            <!-- /.login-card-body -->
         </div>
+        <!-- /.card -->
     </div>
+    <!-- /.login-box -->
 {% endblock %}
