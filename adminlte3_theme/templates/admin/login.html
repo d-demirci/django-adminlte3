@@ -19,15 +19,23 @@
 
 
     <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
-        <div class="form-group has-feedback">
-            <input type="text" id="id_username" name="username" class="form-control" placeholder="Username">
-            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <div class="input-group mb-3">
+            <input type="text" id="id_username" name="username" class="form-control" placeholder="{% trans 'Username' %}">
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-user"></span>
+                </div>
+            </div>
             {{ form.username.errors }}
         </div>
-        <div class="form-group has-feedback">
-            <input type="password" id="id_password" name="password" class="form-control"
-                   placeholder="Password">
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
+        <div class="input-group mb-3">
+            <input type="password" id="id_password" name="password" class="form-control" placeholder="{% trans 'Password' %}">
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                </div>
+            </div>
             {{ form.password.errors }}
             <input type="hidden" name="next" value="{{ next }}"/>
         </div>
@@ -38,10 +46,12 @@
             </div>
         {% endif %}
         <div class="row">
+            <div class="col-8">
+
+            </div>
             <!-- /.col -->
-            <div class="col-xs-4">
-                <button type="submit"
-                        class="btn btn-primary btn-block btn-flat">{% trans 'Log In' %}</button>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">{% trans 'Sign In' %}</button>
             </div>
             <!-- /.col -->
         </div>

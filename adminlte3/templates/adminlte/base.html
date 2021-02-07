@@ -1,5 +1,6 @@
 {% load adminlte_helpers i18n %}
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html>
 <head>
     {% block title_outer %}
@@ -14,6 +15,7 @@
 
     {% block stylesheets %}
         {% include 'adminlte/lib/_styles.html' %}
+        {% block style_sheets %}{% endblock %}
     {% endblock %}
 
     {% block extra_head %}{% endblock %}
@@ -70,11 +72,14 @@
             {% include 'adminlte/lib/_main_footer.html' %}
         {% endblock %}
 
+
+
     </div>
 {% endblock body %}
 
 {% block javascript %}
 {% include 'adminlte/lib/_scripts.html' %}
+{% block js %}{% endblock %}
 {% endblock %}
 
 {% block extra_js %}{% endblock %}
