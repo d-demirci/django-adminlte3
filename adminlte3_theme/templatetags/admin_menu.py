@@ -101,10 +101,11 @@ class _Menu:
     def admin_apps(self, context, r):
         request = context['request']
         for app in context['available_apps']:
+            app_name = app['name'][:20]+'...' if len(app['name']) >= 20 else app['name']
             if(str(app['app_url']) in request.path):
-                    r += '<li class="nav-item has-treeview menu-open"><a href="#" class="nav-link active"><i class="nav-icon fas fa-edit"></i> <p>%s</p><p><i class="fas fa-angle-left right"></i></p></a><ul class="nav nav-treeview">\n' % (app['name'])
+                    r += '<li class="nav-item has-treeview menu-open"><a href="#" class="nav-link active"><i class="nav-icon fas fa-edit"></i> <p>%s</p><p><i class="fas fa-angle-left right"></i></p></a><ul class="nav nav-treeview">\n' % (app_name)
             else:
-                r += '<li class="nav-item has-treeview"><a href="#" class="nav-link"><i class="nav-icon fas fa-edit"></i> <p>%s</p><p><i class="fas fa-angle-left right"></i></p></a><ul class="nav nav-treeview">\n' % (app['name'])
+                r += '<li class="nav-item has-treeview"><a href="#" class="nav-link"><i class="nav-icon fas fa-edit"></i> <p>%s</p><p><i class="fas fa-angle-left right"></i></p></a><ul class="nav nav-treeview">\n' % (app_name)
 
             for model in app['models']:
                 if 'add_url' in model:

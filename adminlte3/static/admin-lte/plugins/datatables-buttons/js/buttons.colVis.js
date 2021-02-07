@@ -123,7 +123,7 @@ $.extend( DataTable.ext.buttons, {
 
 					// This button controls the same column index but the text for the column has
 					// changed
-					button.text( conf._columnText( dt, conf ) );
+					that.text( conf._columnText( dt, conf ) );
 
 					// Since its a different column, we need to check its visibility
 					that.active( dt.column( conf.columns ).visible() );
@@ -143,7 +143,13 @@ $.extend( DataTable.ext.buttons, {
 			// `$( column(col).node() ).text()` but the node might not have been
 			// populated when Buttons is constructed.
 			var idx = dt.column( conf.columns ).index();
-			var title = dt.settings()[0].aoColumns[ idx ].sTitle
+			var title = dt.settings()[0].aoColumns[ idx ].sTitle;
+
+			if (! title) {
+				title = dt.column(idx).header().innerHTML;
+			}
+
+			title = title
 				.replace(/\n/g," ")        // remove new lines
 				.replace(/<br\s*\/?>/gi, " ")  // replace line breaks with spaces
 				.replace(/<select(.*?)<\/select>/g, "") // remove select tags, including options text

@@ -1,15 +1,15 @@
-/*! KeyTable 2.5.1
- * ©2009-2019 SpryMedia Ltd - datatables.net/license
+/*! KeyTable 2.5.3
+ * ©2009-2020 SpryMedia Ltd - datatables.net/license
  */
 
 /**
  * @summary     KeyTable
  * @description Spreadsheet like keyboard navigation for DataTables
- * @version     2.5.1
+ * @version     2.5.3
  * @file        dataTables.keyTable.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
- * @copyright   Copyright 2009-2019 SpryMedia Ltd.
+ * @copyright   Copyright 2009-2020 SpryMedia Ltd.
  *
  * This source file is free software, available under the following license:
  *   MIT license - http://datatables.net/license/mit
@@ -50,6 +50,7 @@
 'use strict';
 var DataTable = $.fn.dataTable;
 var namespaceCounter = 0;
+var editorNamespaceCounter = 0;
 
 
 var KeyTable = function ( dt, opts ) {
@@ -84,7 +85,10 @@ var KeyTable = function ( dt, opts ) {
 		lastFocus: null,
 
 		/** @type {string} Unique namespace per instance */
-		namespace: '.keyTable-'+(namespaceCounter++)
+		namespace: '.keyTable-'+(namespaceCounter++),
+
+		/** @type {Node} Input element for tabbing into the table */
+		tabInput: null
 	};
 
 	// DOM items
@@ -272,6 +276,10 @@ $.extend( KeyTable.prototype, {
 					return;
 				}
 
+				if ( that.s.lastFocus && this !== that.s.lastFocus.cell.node() ) {
+					return;
+				}
+
 				that._editor( null, e, true );
 			} );
 
@@ -297,15 +305,21 @@ $.extend( KeyTable.prototype, {
 			} );
 		}
 
+		dt.on( 'column-visibility'+namespace, function (e) {
+			that._tabInput();
+		} );
+
 		// Redraw - retain focus on the current cell
 		dt.on( 'draw'+namespace, function (e) {
+			that._tabInput();
+
 			if ( that.s.focusDraw ) {
 				return;
 			}
 
 			var lastFocus = that.s.lastFocus;
 
-			if ( lastFocus && lastFocus.node && $(lastFocus.node).closest('body') === document.body ) {
+			if ( lastFocus ) {
 				var relative = that.s.lastFocus.relative;
 				var info = dt.page.info();
 				var row = relative.row + info.start;
@@ -494,11 +508,16 @@ $.extend( KeyTable.prototype, {
 	 */
 	_editor: function ( key, orig, hardEdit )
 	{
+		// If nothing focused, we can't take any action
+		if (! this.s.lastFocus) {
+			return;	
+		}
+
 		var that = this;
 		var dt = this.s.dt;
 		var editor = this.c.editor;
 		var editCell = this.s.lastFocus.cell;
-		var namespace = this.s.namespace;
+		var namespace = this.s.namespace + 'e' + editorNamespaceCounter++;
 
 		// Do nothing if there is already an inline edit in this cell
 		if ( $('div.DTE', editCell.node()).length ) {
@@ -563,7 +582,7 @@ $.extend( KeyTable.prototype, {
 					} );
 
 					// Restore full key navigation on close
-					editor.one( 'close', function () {
+					editor.one( 'close'+namespace, function () {
 						dt.keys.enable( true );
 						dt.off( 'key-blur.editor' );
 						editor.off( namespace );
@@ -1020,8 +1039,8 @@ $.extend( KeyTable.prototype, {
 
 
 	/**
-	 * Create a hidden input element that can receive focus on behalf of the
-	 * table
+	 * Create and insert a hidden input element that can receive focus on behalf
+	 * of the table
 	 *
 	 * @private
 	 */
@@ -1037,22 +1056,32 @@ $.extend( KeyTable.prototype, {
 			return;
 		}
 
-		var div = $('<div><input type="text" tabindex="'+tabIndex+'"/></div>')
-			.css( {
-				position: 'absolute',
-				height: 1,
-				width: 0,
-				overflow: 'hidden'
-			} )
-			.insertBefore( dt.table().node() );
+		// Only create the input element once on first class
+		if (! this.s.tabInput) {
+			var div = $('<div><input type="text" tabindex="'+tabIndex+'"/></div>')
+				.css( {
+					position: 'absolute',
+					height: 1,
+					width: 0,
+					overflow: 'hidden'
+				} );
 
-		div.children().on( 'focus', function (e) {
-			var cell = dt.cell(':eq(0)', that._columns(), {page: 'current'});
+			div.children().on( 'focus', function (e) {
+				var cell = dt.cell(':eq(0)', that._columns(), {page: 'current'});
+	
+				if ( cell.any() ) {
+					that._focus( cell, null, true, e );
+				}
+			} );
 
-			if ( cell.any() ) {
-				that._focus( cell, null, true, e );
-			}
-		} );
+			this.s.tabInput = div;
+		}
+
+		// Insert the input element into the first cell in the table's body
+		var cell = this.s.dt.cell(':eq(0)', '0:visible', {page: 'current', order: 'current'}).node();
+		if (cell) {
+			$(cell).prepend(this.s.tabInput);
+		}
 	},
 
 	/**
@@ -1151,7 +1180,7 @@ KeyTable.defaults = {
 
 
 
-KeyTable.version = "2.5.1";
+KeyTable.version = "2.5.3";
 
 
 $.fn.dataTable.KeyTable = KeyTable;
