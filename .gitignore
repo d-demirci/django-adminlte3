@@ -54,3 +54,5 @@ coverage.xml
 /env
 /static
 .vscode/
+.idea/
+venv/
