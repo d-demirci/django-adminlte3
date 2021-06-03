@@ -15,7 +15,7 @@
     </div>
     <div class="card-body p-0">
         {{ inline_admin_formset.formset.non_form_errors }}
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <td class="original" style="padding: 2px 0 0 0; width: 0; _position: relative;"></td>
@@ -64,10 +64,10 @@
                                 </p>
                             {% endif %}
                             {% if inline_admin_form.needs_explicit_pk_field %}
-                                {{ inline_admin_form.pk_field.field }}
+                                {{ inline_admin_form.pk_field.field|bootstrap_input }}
                             {% endif %}
                             {% if inline_admin_form.fk_field %}
-                                {{ inline_admin_form.fk_field.field }}
+                                {{ inline_admin_form.fk_field.field|bootstrap_input }}
                             {% endif %}
                             {% spaceless %}
                                 {% for fieldset in inline_admin_form %}
@@ -104,9 +104,11 @@
                             {% endfor %}
                         {% endfor %}
                         {% if inline_admin_formset.formset.can_delete and inline_admin_formset.has_delete_permission %}
-                            <td class="delete">
+                            <td class="delete" style="padding-top: 2em;">
                                 {% if inline_admin_form.original %}
-                                    {{ inline_admin_form.deletion_field.field }}
+                                    <div class="input-group">
+                                        {{ inline_admin_form.deletion_field.field|bootstrap_input }}
+                                    </div>
                                 {% endif %}
                             </td>
                         {% endif %}
