@@ -1,0 +1,31 @@
+{% load i18n static %}
+<div class="input-group">
+    {{ rendered_widget }}
+    {% block links %}
+        {% spaceless %}
+            {% if not is_hidden %}
+                {% if can_change_related %}
+                    <div class="input-group-append">
+                        <a class="change-related btn btn-outline-warning d-flex flex-row align-items-center" id="change_id_{{ name }}" data-href-template="{{ change_related_template_url }}?{{ url_params }}" title="{% blocktranslate %}Change selected {{ model }}{% endblocktranslate %}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if can_add_related %}
+                    <div class="input-group-append">
+                        <a class="add-related btn btn-outline-success d-flex flex-row align-items-center" id="add_id_{{ name }}" href="{{ add_related_url }}?{{ url_params }}" title="{% blocktranslate %}Add another {{ model }}{% endblocktranslate %}">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if can_delete_related %}
+                    <div class="input-group-append">
+                        <a class="delete-related btn btn-outline-danger d-flex flex-row align-items-center" id="delete_id_{{ name }}" data-href-template="{{ delete_related_template_url }}?{{ url_params }}" title="{% blocktranslate %}Delete selected {{ model }}{% endblocktranslate %}">
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endspaceless %}
+    {% endblock %}
+</div>
