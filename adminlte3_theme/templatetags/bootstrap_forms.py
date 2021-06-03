@@ -1,4 +1,4 @@
-from django.contrib.admin.widgets import RelatedFieldWidgetWrapper
+from django.contrib.admin.widgets import RelatedFieldWidgetWrapper, AdminSplitDateTime
 from django.template import Library
 from django.utils.safestring import mark_safe
 
@@ -17,6 +17,8 @@ def bootstrap_input(value):
         bootstrap_class = "form-check-input"
     elif isinstance(value.field.widget, RelatedFieldWidgetWrapper):
         bootstrap_class = "custom-select"  # For wrapped widgets (those with edit, add and delete icons)
+    elif isinstance(value.field.widget, AdminSplitDateTime):
+        return value  # We don't want to style the date time field (for now)
     else:
         bootstrap_class = "form-control"
 
