@@ -1,4 +1,4 @@
-from django.contrib.admin.widgets import RelatedFieldWidgetWrapper, AdminSplitDateTime
+from django.contrib.admin.widgets import RelatedFieldWidgetWrapper, AdminSplitDateTime, AdminFileWidget
 from django.template import Library
 from django.utils.safestring import mark_safe
 
@@ -11,12 +11,18 @@ def bootstrap_input(value):
     current_classes = value.field.widget.attrs.get("class", "").strip().split(" ")
     field_type = value.field.widget.attrs.get("type", "text")
 
+    print(type(value.field.widget))
+
     if field_type == "range":
         bootstrap_class = "form-control-range"
     elif field_type == "checkbox" or field_type == "radio":
         bootstrap_class = "form-check-input"
+    elif field_type == "file":
+        bootstrap_class = "custom-file-input"
     elif isinstance(value.field.widget, RelatedFieldWidgetWrapper):
         bootstrap_class = "custom-select"  # For wrapped widgets (those with edit, add and delete icons)
+    elif isinstance(value.field.widget, AdminFileWidget):
+        bootstrap_class = "custom-file-input"
     elif isinstance(value.field.widget, AdminSplitDateTime):
         return value  # We don't want to style the date time field (for now)
     else:
