@@ -39,6 +39,10 @@ label {
     color: #333;
 }
 
+.custom-file label {
+    font-size: 16px;
+}
+
 /* RADIO BUTTONS */
 
 form ul.radiolist li {
