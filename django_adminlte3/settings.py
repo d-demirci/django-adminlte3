@@ -76,10 +76,19 @@ WSGI_APPLICATION = 'django_adminlte3.wsgi.application'
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+   'default': {
+       'NAME': 'SolarMonitoring',
+       'ENGINE': 'sql_server.pyodbc',
+       'HOST': 'DESKTOP-HU641T5',
+       'USER': 'dalab',
+       'PASSWORD': 'dalab',
+       'driver': 'SQL Server',
+       'OPTIONS': {
+           'driver': 'ODBC Driver 17 for SQL Server',
+           'host_is_server': True,
+           'unicode_results': True,
+       }
+   }
 }
 
 
@@ -107,13 +116,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
