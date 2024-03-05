@@ -49,6 +49,36 @@
 
 {% block content %}
     <div id="content-main" class="container-fluid">
+
+        {#    FILTERS    #}
+        <div id="card-filters" class="card card-info collapsed-card mb-2">
+            <div class="card-header bg-primary">
+                <h3 class="card-title">Filters</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                {% if cl.has_filters %}
+                    {% for spec in cl.filter_specs %}
+                        {% admin_list_filter2 cl spec as list_filter %}
+                        <div class="form-group row form-row field-filters">
+                            <label for="filters" class="col-sm-2 col-form-label">{{ list_filter.title }}:</label>
+                            <div class="col-sm-10">
+                                {% for choice in list_filter.choices %}
+                                    <a href="#">{{ choice.display }}</a>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {#    END FILTERS    #}
+
         {% if cl.formset.errors %}
             <p class="errornote">
                 {% if cl.formset.total_error_count == 1 %}{% trans "Please correct the error below." %}{% else %}
@@ -62,11 +92,11 @@
             {% block search %}{% search_form cl %}{% endblock %}
             <!--  -->
             {% block object-tools %}
-            <div class="col-md-{% if cl.has_filters %}4{% else %}4{% endif %}">
+            <div class=" d-flex flex-row-reverse just col-md-{% if cl.has_filters %}4{% else %}4{% endif %}">
                     {% if cl.has_filters %}
                     <span class="float-sm-right">
                             <a href="#"
-                            class="btn btn-success btn-sm text-light ml-2" data-toggle="collapse" data-target="#changelist-filter" aria-expanded="false" aria-controls="changelist-filter">
+                            class="btn btn-success btn-sm text-light ml-2 mr-1" data-toggle="collapse" data-target="#changelist-filter" aria-expanded="false" aria-controls="changelist-filter">
                                 <i class="fas fa-filter"></i>
                                 {% trans 'Filter' %}
                             </a>
@@ -86,21 +116,8 @@
                     {% endblock %}
             </div>
             {% endblock %}
-            
-        </div>
-            <!--  -->
-            {% block date_hierarchy %}{% date_hierarchy cl %}{% endblock %}
 
-            {% block filters %}
-                {% if cl.has_filters %}
-                    <div id="changelist-filter" class="collapse" >
-                        <h2>{% trans 'Filter' %}</h2>
-                        {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
-                    </div>
-                {% endif %}
-            {% endblock %}
-
-            <form id="changelist-form" method="post"{% if cl.formset.is_multipart %}
+            <form class="mt-2 col-md-12" id="changelist-form" method="post"{% if cl.formset.is_multipart %}
                   enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
                 {% if cl.formset %}
                     <div>{{ cl.formset.management_form }}</div>
@@ -113,6 +130,22 @@
                 {% endblock %}
                  {% block pagination %}{% pagination cl %}{% endblock %}
             </form>
+            
+        </div>
+        <!--  -->
+        {% block date_hierarchy %}{% date_hierarchy cl %}{% endblock %}
+
+        {#    REMOVE AFTER VALIDATION    #}
+{#       {% block filters %}#}
+{#            {% if cl.has_filters %}#}
+{#                <div id="changelist-filter" class="collapse" >#}
+{#                    <h2>{% trans 'Filter' %}</h2>#}
+{#                    {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endblock %}#}
+
+
         </div>
     </div>
 {% endblock %}
@@ -157,6 +190,9 @@ $(function () {
         }catch(err){
             // so no data yet 
         }
+
+        $('.actions').children('.button').attr('class', 'btn btn-sm btn-primary')
+        $('.actions').children('select').attr('class', 'form-control')
 
 });
 
