@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url, include
+from django.urls import re_path as url, include  # Fix to upgrade django version > 3.0
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
